@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col">
+            <p>test page renders</p>
+        </div>
+    </div>
+</div>
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="col-7 col-md-6 my-auto">
+                <h1 class="display-4 logo-font text-black">
+                    Crystal's Cakes
+                </h1>
+                <div>
+                    <h4>
+                        Testing The template render
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
