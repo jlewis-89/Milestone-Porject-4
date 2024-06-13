@@ -23,7 +23,20 @@
 </head>
 
 <body>
+    <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+        <a href="{% url 'home' %}" class="nav-link main-logo-link">
+            <h1 class="nav-link text-black my-0"><strong>Crystal's</strong> Cakes</h1>
+        </a>
+    </div>
+    {% block page_header %}
+    {% endblock %}
 
+    {% block content %}
+    {% endblock %}
+
+    {% block postloadjs %}
+    {% endblock %}
+    <p>Base Template</p>
 </body>
 
 </html>
