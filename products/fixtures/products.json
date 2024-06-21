@@ -1,0 +1,71 @@
+[{
+    "pk": 1,
+    "model": "products.product",
+    "fields": {
+        "name": "cakes",
+        "price": 45.99,
+        "category": "1",
+        "image": "media/CC Image Asset (16)_result.webp"
+    }
+},
+{
+    "pk": 2,
+    "model": "products.product",
+    "fields": {
+        "name": "cupcakes",
+        "price": 9.99,
+        "category": "2",
+        "image": "media/CC Image Asset (30)_result.webp"
+    }
+},
+{
+    "pk": 3,
+    "model": "products.product",
+    "fields": {
+        "name": "cookies",
+        "price": 9.99,
+        "category": "3",
+        "image": "media/CC Image Asset (48)_result.webp"
+    }
+},
+{
+    "pk": 4,
+    "model": "products.product",
+    "fields": {
+        "name": "brownies",
+        "price": 14.99,
+        "category": "4",
+        "image": "media/CC Image Asset (9)_result.webp"
+    }
+},
+{
+    "pk": 5,
+    "model": "products.product",
+    "fields": {
+        "name": "biscuits",
+        "price": 9.99,
+        "category": "5",
+        "image": "media/CC Image Asset (45)_result.webp"
+    }
+},
+{
+    "pk": 6,
+    "model": "products.product",
+    "fields": {
+        "name": "traybakes",
+        "price": 19.99,
+        "category": "6",
+        "image": "media/CC Image Asset (18)_result.webp"
+    }
+},
+{
+    "pk": 7,
+    "model": "products.product",
+    "fields": {
+        "name": "blondies",
+        "price": 19.99,
+        "category": "7",
+        "image": "media/CC Image Asset (17)_result.webp"
+    }
+}
+]
