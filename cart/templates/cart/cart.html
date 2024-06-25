@@ -1,4 +1,4 @@
-{% extends base %}
+{% extends 'base.html' %}
 {% load static %}
 {% block title %}- Cart{% endblock %}
 {% block page_header %}
@@ -25,18 +25,18 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- {% for item in cart_items %}
+                    {% for item in cart_items %}
                     <tr>
                         <td>{{ item.product.name }}</td>
                         <td>{{ item.quantity }}</td>
                         <td>${{ item.product.price }}</td>
                         <td>${{ item.total }}</td>
                     </tr>
-                    {% endfor %} -->
+                    {% endfor %}
                 </tbody>
             </table>
             <p>Total: ${{ cart.total }}</p>
-            <a href="{% url 'checkout' %}" class="btn btn-primary">Checkout</a>
+            <a href="{% url 'checkout' %}" class="btn btn-outline-success">Checkout</a>
         </div>
     </div>
 </div>

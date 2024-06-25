@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from . models import Product
 
 # Create your views here.
 
@@ -52,16 +53,18 @@ def products(request):
 # from .models import Product
 #
 #
-# def all_products(request):
-#     """ A view to show all products, including sorting and search queries """
-#
-#     products = Product.objects.all()
-#
-#     context = {
-#         'products': products,
-#     }
-#
-#     return render(request, 'products/products.html', context)
+
+
+def all_products(request):
+    """ A view to show all products, including sorting and search queries """
+
+    products = Product.objects.all()
+
+    context = {
+        'products': products,
+    }
+
+    return render(request, 'product/products.html', context)
 # from django.shortcuts import render
 # from .models import Product
 
@@ -77,8 +80,4 @@ def products(request):
 #     image = models.ImageField()
 #     image_url = models.URLField(max_length=1024, null=True, blank=True)
 #     image_name = models.CharField(max_length=254, null=True, blank=True)
-#   image_alt = models.CharField(max_length=254, null=True, blank=True)
-#     image_alt = models.CharField(max_length=254, null=True, blank=True)
-#     image_alt = models.CharField(max_length=254, null=True, blank=True)
-#     image_alt = models.CharField(max_length=254, null=True, blank=True)
 #     image_alt = models.CharField(max_length=254, null=True, blank=True)

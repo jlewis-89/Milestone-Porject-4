@@ -3,5 +3,8 @@ body {
     font-size: 16px;
     line-height: 1.5;
     color: #333;
-    background-color: #b9babbb4;
+    background-color: #dee2e6b4;
+    align-content: center;
+    background-size: cover;
+    height: calc(100vh - 164px);
 }

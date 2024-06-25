@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}- My Account{% endblock %}
+{% block page_header %}
+<div class="container-fluid header-container">
+    <div class="row">
+        <div class="col">
+            <h1>Update My Account</h1>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <h2>My Account</h2>
+            <form action="{% url 'update_profile' %}" method="GET">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" value="{{ user.username }}">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" value="{{ user.email }}">
+                </div>
+                <div class="mb-3">
+                    <label for="first_name" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="first_name" name="first_name"
+                        value="{{ user.first_name }}">
+                </div>
+                <div class="mb-3">
+                    <label for="last_name" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="last_name" name="last_name"
+                        value="{{ user.last_name }}">
+                </div>
+                <div class="mb-3">
+                    <label for="phone_number" class="form-label">Phone Number</label>
+                    <input type="text" class="form-control" id="phone_number" name="phone_number"
+                        value="{{ user.phone_number }}">
+                </div>
+                <div class="mb-3">
+                    <label for="address_line1" class="form-label">Address Line 1</label>
+                    <input type="text" class="form-control" id="address_line1" name="address_line1"
+                        value="{{ user.address_line1 }}">
+                </div>
+                <div class="mb-3">
+                    <label for="address_line2" class="form-label">Address Line 2</label>
+                    <input type="text" class="form-control" id="address_line2" name="address_line2"
+                        value="{{ user.address_line2 }}">
+                </div>
+                <div class="mb-3">
+                    <label for="town_or_city" class="form-label">Town or City</label>
+                    <input type="text" class="form-control" id="town_or_city" name="town_or_city"
+                        value="{{ user.town_or_city }}">
+                </div>
+                <div class="mb-3">
+                    <label for="postcode" class="form-label">Postcode</label>
+                    <input type="text" class="form-control" id="postcode" name="postcode" value="{{ user.postcode }}">
+                </div>
+                <div class="mb-3">
+                    <label for="newsletter" class="form-label">Newsletter</label>
+                    <input type="checkbox" class="form-control" id="newsletter" name="newsletter"
+                        value="{{ user.newsletter }}">
+                </div>
+                <button type="submit" class="btn btn-primary">Update Profile</button>
+            </form>
+            <a href="{% url 'update_profile' %}" class="btn btn-primary">Update Profile</a>
+        </div>
+    </div>
+    <a href="" class="container"><button>Account Details<button></a>
+    <a href=""></a>
+    <!-- <div class="row">
+        <div class="col">
+            <h2>My Orders</h2>
+            {% for order in orders %}
+            <div class="card mb-4">
+                <div class="card-header">
+                    Order #{{ order.id }} - {{ order.date }}
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Items</h5>
+                    <ul>
+                        {% for item in order.items.all %}
+                        <li>{{ item.product.name }} - {{ item.quantity }}</li>
+                        {% endfor %}
+                    </ul>
+                    <p>Total: ${{ order.total }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div> -->
+</div>
+{% endblock %}
+{% block postloadjs %}
+{% endblock %}
