@@ -4,6 +4,8 @@ from django.db import models
 
 
 class Product(models.Model):
+    category = models.ForeignKey(
+        'Category', null=True, blank=True, on_delete=models.SET_NULL)
     title = models.CharField(max_length=255)
     price = models.DecimalField(max_digits=5, decimal_places=2)
     description = models.TextField()
@@ -36,6 +38,7 @@ class Category(models.Model):
 #     size = models.CharField(max_length=255)
 #     collection_date = models.DateField()
 #     collection_time = models.DateTimeField()
+
 
     def __str__(self):
         return self.title

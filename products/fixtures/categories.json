@@ -2,7 +2,7 @@
     {
         "pk": 1,
         "model": "products.category",
-        "field": {
+        "fields": {
             "name": "cakes",
             "friendly_name": "Cakes"
         }
@@ -10,7 +10,7 @@
     {
         "pk": 2,
         "model": "products.category",
-        "field": {
+        "fields": {
             "name": "cupcakes",
             "friendly_name": "Cupcakes"
         }
@@ -18,7 +18,7 @@
     {
         "pk": 3,
         "model": "products.category",
-        "field": {
+        "fields": {
             "name": "cookies",
             "friendly_name": "Cookies"
         }
@@ -26,7 +26,7 @@
     {
         "pk": 4,
         "model": "products.category",
-        "field": {
+        "fields": {
             "name": "brownies",
             "friendly_name": "Brownies"
         }
@@ -34,7 +34,7 @@
     {
         "pk": 5,
         "model": "products.category",
-        "field": {
+        "fields": {
             "name": "biscuits",
             "friendly_name": "Biscuits"
         }
@@ -42,7 +42,7 @@
     {
         "pk": 6,
         "model": "products.category",
-        "field": {
+        "fields": {
             "name": "traybakes",
             "friendly_name": "Traybakes"
         }
@@ -50,7 +50,7 @@
     {
         "pk": 7,
         "model": "products.category",
-        "field": {
+        "fieldss": {
             "name": "blondies",
             "friendly_name": "Blondies"
         }
@@ -58,7 +58,7 @@
     {
         "pk": 8,
         "model": "products.category",
-        "field": {
+        "fields": {
             "name": "birthdays",
             "friendly_name": "Birthdays"
         }
@@ -66,7 +66,7 @@
     {
         "pk": 9,
         "model": "products.category",
-        "field": {
+        "fields": {
             "name": "weddings",
             "friendly_name": "Weddings"
         }
@@ -74,7 +74,7 @@
     {
         "pk": 10,
         "model": "products.category",
-        "field": {
+        "fields": {
             "name": "christmas",
             "friendly_name": "Christmas"
         }
@@ -82,7 +82,7 @@
     {
         "pk": 11,
         "model": "products.category",
-        "field": {
+        "fields": {
             "name": "easter",
             "friendly_name": "Easter"
         }
@@ -90,7 +90,7 @@
     {
         "pk": 12,
         "model": "products.category",
-        "field": {
+        "fields": {
             "name": "valentines",
             "friendly_name": "Valentines"
         }
@@ -98,7 +98,7 @@
     {
         "pk": 13,
         "model": "products.category",
-        "field": {
+        "fields": {
             "name": "halloween",
             "friendly_name": "Halloween"
         }
@@ -106,7 +106,7 @@
     {
         "pk": 14,
         "model": "products.category",
-        "field": {
+        "fields": {
             "name": "mothers_day",
             "friendly_name": "Mothers Day"
         }
@@ -114,7 +114,7 @@
     {
         "pk": 15,
         "model": "products.category",
-        "field": {
+        "fields": {
             "name": "fathers_day",
             "friendly_name": "Fathers Day"
         }
@@ -122,7 +122,7 @@
     {
         "pk": 16,
         "model": "products.category",
-        "field": {
+        "fields": {
             "name": "new_year",
             "friendly_name": "New Year"
         }
@@ -130,7 +130,7 @@
     {
         "pk": 17,
         "model": "products.category",
-        "field": {
+        "fields": {
             "name": "thanksgiving",
             "friendly_name": "Thanksgiving"
         }
@@ -138,7 +138,7 @@
     {
         "pk": 18,
         "model": "products.category",
-        "field": {
+        "fields": {
             "name": "anniversary",
             "friendly_name": "Anniversary"
         }
@@ -146,7 +146,7 @@
     {
         "pk": 19,
         "model": "products.category",
-        "field": {
+        "fields": {
             "name": "baby_shower",
             "friendly_name": "Baby Shower"
         }
@@ -154,7 +154,7 @@
     {
         "pk": 20,
         "model": "products.category",
-        "field": {
+        "fields": {
             "name": "engagement",
             "friendly_name": "Engagement"
         }
@@ -162,7 +162,7 @@
     {
         "pk": 21,
         "model": "products.category",
-        "field": {
+        "fields": {
             "name": "graduation",
             "friendly_name": "Graduation"
         }
@@ -170,7 +170,7 @@
     {
         "pk": 22,
         "model": "products.category",
-        "field": {
+        "fields": {
             "name": "retirement",
             "friendly_name": "Retirement"
         }

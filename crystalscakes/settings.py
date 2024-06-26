@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'home',
-    'products',  # db required
+    'products',
     'cart',
     'profiles',  # db required
     'checkout',
