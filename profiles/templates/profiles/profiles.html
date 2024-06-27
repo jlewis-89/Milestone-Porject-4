@@ -15,16 +15,25 @@
     <div class="row">
         <div class="col">
             <h2>My Account</h2>
+            <hr>
             <p><i class="fa-regular fa-user"></i> Username: {{ user.username }}</p>
             <p>First Name: {{user.firstname}}</p>
             <p>Last Name: {{user.lastname}}</p>
+            <br>
             <p><i class="fa-regular fa-envelope"></i> Email: {{ user.email }}</p>
+            <br>
             <p><i class="fa-regular fa-address-book"></i> Address: {{ user.address }}</p>
+            <hr>
             <p>First Line: {{user.address.firstline}}</p>
+            <br>
             <p>Last Line: {{user.address.lastline}}</p>
+            <br>
             <p>City: {{user.address.city}}</p>
+            <br>
             <p>Postcode: {{user.address.postcode}}</p>
+            <hr>
             <p><i class="fa-solid fa-phone"></i> Phone: {{ user.phone }}</p>
+            <br>
             <a href="{% url 'update_profile' %}" class="btn btn-outline-dark">Update My Account</a>
         </div>
     </div>

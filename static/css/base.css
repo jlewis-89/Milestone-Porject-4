@@ -9,10 +9,6 @@ body {
     height: calc(100vh - 164px);
 }
 
-.body-padding {
-    background-color: blue;
-}
-
 /* toasts walkthrough project CI  */
 .message-container {
     position: fixed;
