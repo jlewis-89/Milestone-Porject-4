@@ -24,15 +24,17 @@
             <br>
             <p><i class="fa-regular fa-address-book"></i> Address: {{ user.address }}</p>
             <hr>
-            <p>First Line: {{user.address.firstline}}</p>
+            <p>First Line: {{user.address.address1}}</p>
             <br>
-            <p>Last Line: {{user.address.lastline}}</p>
+            <p>Last Line: {{user.address.address2}}</p>
             <br>
-            <p>City: {{user.address.city}}</p>
+            <p>City: {{user.address.town_or_city}}</p>
+            <br>
+            <p>County: {{user.address.county}}</p>
             <br>
             <p>Postcode: {{user.address.postcode}}</p>
             <hr>
-            <p><i class="fa-solid fa-phone"></i> Phone: {{ user.phone }}</p>
+            <p><i class="fa-solid fa-phone"></i> Phone: {{ user.phone_number }}</p>
             <br>
             <a href="{% url 'update_profile' %}" class="btn btn-outline-dark">Update My Account</a>
         </div>

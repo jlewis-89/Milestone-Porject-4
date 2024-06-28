@@ -10,6 +10,9 @@ class UserProfile(models.Model):
     delivery information and order history
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
+    firstname = models.CharField(max_length=80,
+                                    null=True, blank=True)
+    lastname = models.CharField(max_length=80, null=True, blank=True)
     phone_number = models.CharField(max_length=20,
                                     null=True, blank=True)
     address1 = models.CharField(max_length=80,
@@ -21,6 +24,8 @@ class UserProfile(models.Model):
     county = models.CharField(max_length=80,
                               null=True, blank=True)
     postcode = models.CharField(max_length=20,
+                                null=True, blank=True)
+    email = models.CharField(max_length=254,
                                 null=True, blank=True)
 
     def __str__(self):
