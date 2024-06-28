@@ -35,8 +35,10 @@
                     {% endfor %}
                 </tbody>
             </table>
-            <p>Total: ${{ cart.total }}</p>
+            <p>Total: £{{ cart.total }}</p>
             <a href="{% url 'checkout' %}" class="btn btn-outline-success">Checkout</a>
+            <a href="{% url 'products' %}" class="btn btn-outline-dark">Keep Shopping</a>
+            <a href="{% url 'cart' %}" class="btn btn-outline-danger">Remove Item</a>
         </div>
     </div>
 </div>
