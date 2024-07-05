@@ -1,6 +1,6 @@
 [
     {
-        "pk": 1,
+        "pk": 23,
         "model": "products.product",
         "fields": {
             "name": "cakes",
@@ -10,7 +10,7 @@
         }
     },
     {
-        "pk": 2,
+        "pk": 24,
         "model": "products.product",
         "fields": {
             "name": "cupcakes",
@@ -20,7 +20,7 @@
         }
     },
     {
-        "pk": 3,
+        "pk": 25,
         "model": "products.product",
         "fields": {
             "name": "cookies",
@@ -30,7 +30,7 @@
         }
     },
     {
-        "pk": 4,
+        "pk": 26,
         "model": "products.product",
         "fields": {
             "name": "brownies",
@@ -40,7 +40,7 @@
         }
     },
     {
-        "pk": 5,
+        "pk": 27,
         "model": "products.product",
         "fields": {
             "name": "biscuits",
@@ -50,7 +50,7 @@
         }
     },
     {
-        "pk": 6,
+        "pk": 28,
         "model": "products.product",
         "fields": {
             "name": "traybakes",
@@ -60,7 +60,7 @@
         }
     },
     {
-        "pk": 7,
+        "pk": 29,
         "model": "products.product",
         "fields": {
             "name": "blondies",

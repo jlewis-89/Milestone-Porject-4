@@ -142,6 +142,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
+DJANGO_SETTINGS_MODULE = 'crystalscakes.settings'
+
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
