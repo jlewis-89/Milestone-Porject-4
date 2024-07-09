@@ -1,178 +1,74 @@
 [
     {
-        "model": "products.category",
         "pk": 1,
+        "model": "products.category",
         "fields": {
             "name": "cakes",
             "friendly_name": "Cakes"
         }
     },
     {
-        "model": "products.category",
         "pk": 2,
+        "model": "products.category",
         "fields": {
             "name": "cupcakes",
             "friendly_name": "Cupcakes"
         }
     },
     {
-        "model": "products.category",
         "pk": 3,
+        "model": "products.category",
         "fields": {
             "name": "cookies",
             "friendly_name": "Cookies"
         }
     },
     {
-        "model": "products.category",
         "pk": 4,
+        "model": "products.category",
         "fields": {
             "name": "brownies",
             "friendly_name": "Brownies"
         }
     },
     {
-        "model": "products.category",
         "pk": 5,
+        "model": "products.category",
         "fields": {
             "name": "biscuits",
             "friendly_name": "Biscuits"
         }
     },
     {
-        "model": "products.category",
         "pk": 6,
+        "model": "products.category",
         "fields": {
             "name": "traybakes",
             "friendly_name": "Traybakes"
         }
     },
     {
-        "model": "products.category",
         "pk": 7,
-        "fieldss": {
+        "model": "products.category",
+        "fields": {
             "name": "blondies",
             "friendly_name": "Blondies"
         }
     },
     {
-        "model": "products.category",
         "pk": 8,
+        "model": "products.category",
         "fields": {
             "name": "birthdays",
             "friendly_name": "Birthdays"
         }
     },
     {
-        "model": "products.category",
         "pk": 9,
-        "fields": {
-            "name": "weddings",
-            "friendly_name": "Weddings"
-        }
-    },
-    {
         "model": "products.category",
-        "pk": 10,
         "fields": {
-            "name": "christmas",
-            "friendly_name": "Christmas"
-        }
-    },
-    {
-        "model": "products.category",
-        "pk": 11,
-        "fields": {
-            "name": "easter",
-            "friendly_name": "Easter"
-        }
-    },
-    {
-        "model": "products.category",
-        "pk": 12,
-        "fields": {
-            "name": "valentines",
-            "friendly_name": "Valentines"
-        }
-    },
-    {
-        "model": "products.category",
-        "pk": 13,
-        "fields": {
-            "name": "halloween",
-            "friendly_name": "Halloween"
-        }
-    },
-    {
-        "model": "products.category",
-        "pk": 14,
-        "fields": {
-            "name": "mothers_day",
-            "friendly_name": "Mothers Day"
-        }
-    },
-    {
-        "model": "products.category",
-        "pk": 15,
-        "fields": {
-            "name": "fathers_day",
-            "friendly_name": "Fathers Day"
-        }
-    },
-    {
-        "model": "products.category",
-        "pk": 16,
-        "fields": {
-            "name": "new_year",
-            "friendly_name": "New Year"
-        }
-    },
-    {
-        "model": "products.category",
-        "pk": 17,
-        "fields": {
-            "name": "thanksgiving",
-            "friendly_name": "Thanksgiving"
-        }
-    },
-    {
-        "model": "products.category",
-        "pk": 18,
-        "fields": {
-            "name": "anniversary",
-            "friendly_name": "Anniversary"
-        }
-    },
-    {
-        "model": "products.category",
-        "pk": 19,
-        "fields": {
-            "name": "baby_shower",
-            "friendly_name": "Baby Shower"
-        }
-    },
-    {
-        "model": "products.category",
-        "pk": 20,
-        "fields": {
-            "name": "engagement",
-            "friendly_name": "Engagement"
-        }
-    },
-    {
-        "model": "products.category",
-        "pk": 21,
-        "fields": {
-            "name": "graduation",
-            "friendly_name": "Graduation"
-        }
-    },
-    {
-        "model": "products.category",
-        "pk": 22,
-        "fields": {
-            "name": "retirement",
-            "friendly_name": "Retirement"
+            "name": "special_occasions",
+            "friendly_name": "Special Occasions"
         }
     }
 ]

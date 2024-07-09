@@ -1,72 +1,134 @@
 [
     {
-        "pk": 23,
+        "pk": 1,
         "model": "products.product",
         "fields": {
-            "name": "cakes",
+            "sku": "pp5001340155",
+            "name": "Cake",
+            "description": "Basic cake with customisable features",
             "price": 45.99,
-            "category": "1",
-            "image": "media/CC Image Asset (16)_result.webp"
+            "category": 1,
+            "image": "CC Image Asset (51)_result.webp"
         }
     },
     {
-        "pk": 24,
+        "pk": 2,
         "model": "products.product",
         "fields": {
-            "name": "cupcakes",
-            "price": 9.99,
-            "category": "2",
-            "image": "media/CC Image Asset (30)_result.webp"
+            "sku": "pp5001600425",
+            "name": "Cupcake",
+            "description": "Set of 6 cupcakes made to order with customisable features",
+            "price": 21.99,
+            "category": 2,
+            "image": "CC Image Asset (14)_result.webp"
         }
     },
     {
-        "pk": 25,
+        "pk": 3,
         "model": "products.product",
         "fields": {
-            "name": "cookies",
-            "price": 9.99,
-            "category": "3",
-            "image": "media/CC Image Asset (48)_result.webp"
+            "sku": "pp5001730010",
+            "name": "Cookies",
+            "description": " Set of 12 cookies made to order with customisable features",
+            "price": 20.99,
+            "category": 3,
+            "image": "CC Image Asset (48)_result.webp"
         }
     },
     {
-        "pk": 26,
+        "pk": 4,
         "model": "products.product",
         "fields": {
-            "name": "brownies",
-            "price": 14.99,
-            "category": "4",
-            "image": "media/CC Image Asset (9)_result.webp"
+            "sku": "pp5001890157",
+            "name": "Brownie",
+            "description": "Set of 9 brownies made to order with customisable features",
+            "price": 16.99,
+            "category": 4,
+            "image": "CC Image Asset (9)_result.webp"
         }
     },
     {
-        "pk": 27,
+        "pk": 5,
         "model": "products.product",
         "fields": {
-            "name": "biscuits",
-            "price": 9.99,
-            "category": "5",
-            "image": "media/CC Image Asset (45)_result.webp"
+            "sku": "pp5002111605",
+            "name": "Biscuits",
+            "description": "Set of 16 biscuits made to order with customisable features",
+            "price": 15.99,
+            "category": 5,
+            "image": "CC Image Asset (45)_result.webp"
         }
     },
     {
-        "pk": 28,
+        "pk": 6,
         "model": "products.product",
         "fields": {
-            "name": "traybakes",
-            "price": 19.99,
-            "category": "6",
-            "image": "media/CC Image Asset (18)_result.webp"
+            "sku": "pp5002260206",
+            "name": "Traybake",
+            "description": "One full size traybake made to order with customisable features",
+            "price": 28.99,
+            "category": 6,
+            "image": "CC Image Asset (49)_result.webp"
         }
     },
     {
-        "pk": 29,
+        "pk": 7,
         "model": "products.product",
         "fields": {
-            "name": "blondies",
-            "price": 19.99,
-            "category": "7",
-            "image": "media/CC Image Asset (17)_result.webp"
+            "sku": "pp5002440521",
+            "name": "Blondie",
+            "description": "One full size blondie made to order with customisable features",
+            "price": 18.99,
+            "category": 7,
+            "image": "CC Image Asset (17)_result.webp"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5002601115",
+            "name": "Birthday Occasions",
+            "description": "Bespoke birthday cakes made to order with customisable features for all ages and stages",
+            "price": 45.99,
+            "category": 8,
+            "image": "CC Image Asset (15)_result.webp"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5002690715",
+            "name": "Special Occasions",
+            "description": "All baked goods for seasonal or special occasions made to order with customisable features",
+            "price": 39.99,
+            "category": 9,
+            "image": "CC Image Asset (64)_result.webp"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5007310220",
+            "name": "Speciality Item 1",
+            "description": "Speciality Item 1 description",
+            "price": 39.99,
+            "category": 8,
+            "image": "CC Image Asset (36)_result.webp"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5007320233",
+            "name": "Speciality Item 2",
+            "description": "Speciality Item 2 description",
+            "price": 39.99,
+            "category": 8,
+            "image": "CC Image Asset (52)_result.webp"
         }
     }
 ]
