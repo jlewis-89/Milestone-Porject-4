@@ -8,7 +8,7 @@
             "description": "Basic cake with customisable features",
             "price": 45.99,
             "category": 1,
-            "image": "CC Image Asset (51)_result.webp"
+            "image": "media/CC Image Asset (51)_result.webp"
         }
     },
     {
@@ -20,7 +20,7 @@
             "description": "Set of 6 cupcakes made to order with customisable features",
             "price": 21.99,
             "category": 2,
-            "image": "CC Image Asset (14)_result.webp"
+            "image": "media/CC Image Asset (14)_result.webp"
         }
     },
     {
@@ -32,7 +32,7 @@
             "description": " Set of 12 cookies made to order with customisable features",
             "price": 20.99,
             "category": 3,
-            "image": "CC Image Asset (48)_result.webp"
+            "image": "media/CC Image Asset (48)_result.webp"
         }
     },
     {
@@ -44,7 +44,7 @@
             "description": "Set of 9 brownies made to order with customisable features",
             "price": 16.99,
             "category": 4,
-            "image": "CC Image Asset (9)_result.webp"
+            "image": "media/CC Image Asset (9)_result.webp"
         }
     },
     {
@@ -56,7 +56,7 @@
             "description": "Set of 16 biscuits made to order with customisable features",
             "price": 15.99,
             "category": 5,
-            "image": "CC Image Asset (45)_result.webp"
+            "image": "media/CC Image Asset (45)_result.webp"
         }
     },
     {
@@ -68,7 +68,7 @@
             "description": "One full size traybake made to order with customisable features",
             "price": 28.99,
             "category": 6,
-            "image": "CC Image Asset (49)_result.webp"
+            "image": "media/CC Image Asset (49)_result.webp"
         }
     },
     {
@@ -80,7 +80,7 @@
             "description": "One full size blondie made to order with customisable features",
             "price": 18.99,
             "category": 7,
-            "image": "CC Image Asset (17)_result.webp"
+            "image": "media/CC Image Asset (17)_result.webp"
         }
     },
     {
@@ -92,7 +92,7 @@
             "description": "Bespoke birthday cakes made to order with customisable features for all ages and stages",
             "price": 45.99,
             "category": 8,
-            "image": "CC Image Asset (15)_result.webp"
+            "image": "media/CC Image Asset (15)_result.webp"
         }
     },
     {
@@ -104,7 +104,7 @@
             "description": "All baked goods for seasonal or special occasions made to order with customisable features",
             "price": 39.99,
             "category": 9,
-            "image": "CC Image Asset (64)_result.webp"
+            "image": "media/CC Image Asset (64)_result.webp"
         }
     },
     {
@@ -116,7 +116,7 @@
             "description": "Speciality Item 1 description",
             "price": 39.99,
             "category": 8,
-            "image": "CC Image Asset (36)_result.webp"
+            "image": "media/CC Image Asset (36)_result.webp"
         }
     },
     {
@@ -128,7 +128,7 @@
             "description": "Speciality Item 2 description",
             "price": 39.99,
             "category": 8,
-            "image": "CC Image Asset (52)_result.webp"
+            "image": "media/CC Image Asset (52)_result.webp"
         }
     }
 ]
