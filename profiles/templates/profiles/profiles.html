@@ -5,16 +5,16 @@
 <div class="container header-container">
     <div class="row">
         <div class="col">
-            <h1><i class="fa-solid fa-user"></i> My Account</h1>
+            <h1>My Account</h1>
         </div>
     </div>
 </div>
 {% endblock %}
 {% block content %}
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col">
-            <h2>My Account</h2>
+            <h2><i class="fa-solid fa-user"></i> My Account</h2>
             <hr>
             <p><i class="fa-regular fa-user"></i> Username: {{ user.username }}</p>
             <p>First Name: {{user.firstname}}</p>
@@ -40,39 +40,39 @@
         </div>
     </div>
     <hr>
-</div>
-<section class="container">
-    <div class="row">
-        <div class="col">
-            <h2><i class="fa-solid fa-cake-candles"></i> My Orders</h2>
-            {% for order in orders %}
-            <div class="card mb-4">
-                <div class="card-header">
-                    Order #{{ order.id }} - {{ order.date }}
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">Items</h5>
-                </div>
-                <ul>
-                    {% for item in order.items.all %}
-                    <li>{{ item.product.name }} - {{ item.quantity }}</li>
-                    {% endfor %}
-                </ul>
-                <p>Total: ${{ order.total }}</p>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-    <hr>
-</section>
-<section class="container">
-    <div class="row">
-        <div class="col">
-            <h2><i class="fa-regular fa-star"></i> My Favorites</h2>
-        </div>
-    </div>
-</section>
 
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <h2><i class="fa-solid fa-cake-candles"></i> My Orders</h2>
+                {% for order in orders %}
+                <div class="card mb-4">
+                    <div class="card-header">
+                        Order #{{ order.id }} - {{ order.date }}
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Items</h5>
+                    </div>
+                    <ul>
+                        {% for item in order.items.all %}
+                        <li>{{ item.product.name }} - {{ item.quantity }}</li>
+                        {% endfor %}
+                    </ul>
+                    <p>Total: ${{ order.total }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <hr>
+    </section>
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <h2><i class="fa-regular fa-star"></i> My Favorites</h2>
+            </div>
+        </div>
+    </section>
+</div>
 {% endblock %}
 {% block preloadjs %}
 {% endblock %}

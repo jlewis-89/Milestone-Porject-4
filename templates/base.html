@@ -55,9 +55,22 @@
             </div>
         </nav>
     </header>
-    <div class="body-padding">
-    </div>
-
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="toast align-items-center text-white bg-danger border-0" role="alert" aria-live="assertive"
+                    aria-atomic="true">
+                    <div class="d-flex">
+                        <div class="toast-body">
+                            This is a toast message
+                        </div>
+                        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                            aria-label="Close"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     {% if messages %}
     <div class="container">
         <div class="row">
@@ -74,17 +87,16 @@
     {% endif %}
     {% block page_header %}
     {% endblock %}
-
     {% block content %}
     {% endblock %}
-
+<div class="d-flex vh-100"></div>
     {% block postloadjs %}
     <script type="text/javascript">
         $('.toast').toast('show');
     </script>
     {% endblock %}
     <!-- Footer taken from mdbootstrap.com  -->
-    <div class="container-fluid fixed-bottom">
+    <div class="container-fluid mt-auto overflow-auto fixed-bottom">
         <!-- Footer -->
         <footer class="text-center text-lg-start text-white" style="background-color: #1c2331">
             <!-- Section: Social media -->

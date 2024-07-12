@@ -6,7 +6,16 @@ body {
     background-color: #dee2e6b4;
     align-content: center;
     background-size: cover;
-    height: calc(100vh - 164px);
+    height: 100%;
+}
+
+.header-container {
+    display: flexbox;
+    background-color: #343a40;
+    color: #fff;
+    padding: 25;
+    text-align: left;
+    margin-top: 200px;
 }
 
 /* toasts walkthrough project CI  */
