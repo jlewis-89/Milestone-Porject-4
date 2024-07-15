@@ -3,22 +3,58 @@
 {% block title %}- Home{% endblock %}
 {% block page_header %}
 <div class="container-fluid header-container">
-    <h1>Home</h1>
-</div>
-{% endblock %}
-{% block content %}
-<div class="container fixed-top" style="top: 64px;">
-    <div class="row">
-        <div class="col-10 col-md-6 my-auto">
-            <h1 class="display-4">
-                Your Best Local Baker is now <strong>Online</strong>
-            </h1>
-            <div class="my-5">
-                <h4>
-                    <a href="" class="shop-now-button btn btn-outline-dark rounded-2 text-uppercase py-3">Shop Now</a>
-                </h4>
+    <div class="container sticky-top">
+        <div class="row">
+            <div class="col-10 col-md-6 my-auto">
+                <h1 class="display-4">
+                    Your Best Local Baker is now <strong>Online</strong>
+                </h1>
+                <div class="my-5">
+                    <h4>
+                        <a href="" class="shop-now-button btn btn-outline-light rounded-2 text-uppercase py-3">Shop
+                            Now</a>
+                    </h4>
+                </div>
             </div>
         </div>
     </div>
 </div>
+{% endblock %}
+{% block content %}
+
+<br>
+<div>
+    <div class="row">
+        <div class="col">
+            <h2>Featured Products</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="2000"></div>
+                    {% for product in products %}
+
+                    <img src="{{ product.image.url }}" class="d-block w-100" alt="{{ product.name }}">
+                    <a href="{% url 'products' product.id %}" class="btn btn-outline-dark">More Info</a>
+
+                    {% endfor %}
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</div>
+</div>
+<div style="height: 100vh;"></div>
 {% endblock %}
