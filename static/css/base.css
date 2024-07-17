@@ -1,3 +1,7 @@
+html {
+    height: 100%;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -12,12 +16,7 @@ body {
 }
 
 .header-container {
-    display: flexbox;
-    background-color: #cccccc;
-    color: #fff;
-    padding: 25;
-    text-align: left;
-    margin-top: 200px;
+    padding-top: 116px;
 }
 
 .footer-container {

@@ -13,8 +13,14 @@
     <div class="row">
         {% for product in products %}
         <div class="col-12 col-md-6 col-lg-4">
-            <div class="card mb-4" >
-                <img src="{{ product.image.url }}" style="max-height: 240px;" class="card-img-top img-fluid" alt="{{ product.name }}">
+            <div class="card mb-4">
+                {% if product.image %}
+                <img src="{{ product.image.url }}" style="max-height: 240px;" class="card-img-top img-fluid"
+                    alt="{{ product.name }}">
+                {% else %}
+                <img src="{{ MEDIA_URL }}no_image.jpg" style="max-height: 240px;" class="card-img-top img-fluid"
+                    alt="{{ product.name }}">
+                {% endif %}
                 <div class="card-body">
                     <h5 class="card-title">{{ product.name }}</h5>
                     <p class="card-text">{{ product.description }}</p>
