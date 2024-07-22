@@ -4,14 +4,13 @@ from .models import UserProfile
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.shortcuts import render, get_object_or_404
-from django.shortcuts import render
-
+from checkout.models import Order
 # Create your views here.
 
 
-def profiles(request):
+def profile(request):
     """ A view to return the profiles page """
-    return render(request, 'profiles/profiles.html')
+    return render(request, 'profiles/profile.html')
 
 
 def update_profile(request):
@@ -47,18 +46,18 @@ def profile(request):
     return render(request, template, context)
 
 
-# def order_history(request, order_number):
-#     order = get_object_or_404(Order, order_number=order_number)
+def order_history(request, order_number):
+    order = get_object_or_404(Order, order_number=order_number)
 
-#     messages.info(request, (
-#         f'This is a past confirmation for order number {order_number}. '
-#         'A confirmation email was sent on the order date.'
-#     ))
+    messages.info(request, (
+        f'This is a past confirmation for order number {order_number}. '
+        'A confirmation email was sent on the order date.'
+    ))
 
-#     template = 'checkout/checkout_success.html'
-#     context = {
-#         'order': order,
-#         'from_profile': True,
-#     }
+    template = 'checkout/checkout_success.html'
+    context = {
+        'order': order,
+        'from_profile': True,
+    }
 
-#     return render(request, template, context)
+    return render(request, template, context)
