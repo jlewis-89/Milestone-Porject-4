@@ -36,13 +36,30 @@
                 <div class="collapse navbar-collapse my-auto" id="navbarNav">
                     <ul class="navbar-nav ">
                         <li class="nav-item">
-                            <a class="nav-link text-white me-4" href="{% url 'home' %}">Home</a>
+                            <a class="nav-link text-white me-4" href="{% url 'home' %}"> <i
+                                    class="fa-solid fa-house"></i> Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white me-4" href="{% url 'products' %}">Products</a>
+                            <a class="nav-link text-white me-4" href="{% url 'products' %}"><i
+                                    class="fa-solid fa-shop"></i> Products</a>
+                        </li>
+                        {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="nav-link text-white me-4" href="{% url 'profile' %}"><i
+                                    class="fa-solid fa-user"></i> My Account</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white me-4" href="{% url 'profile' %}">My Account</a>
+                            <a class="nav-link text-white me-4" href="{% url 'accout_logout' %}"><i
+                                    class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+                        </li>
+                        {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link text-white me-4" href="{% url 'account_signup' %}"><i
+                                    class="fa-solid fa-user-plus"></i> Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white me-4" href="{% url 'account_login' %}"><i
+                                    class="fa-solid fa-right-to-bracket"></i> Login</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white me-4" href="{% url 'cart' %}">Cart</a>
@@ -50,10 +67,12 @@
                         <li class="nav-item">
                             <a class="nav-link text-white me-4" href="{% url 'checkout' %}">Checkout</a>
                         </li>
+                        {% endif %}
                     </ul>
                     <form method="GET" action="{% url 'products' %}">
                         <div class="input-group w-100">
-                            <input class="form-control border border-black rounded-2" type="text" name="q" placeholder="Search">
+                            <input class="form-control border border-black rounded-2" type="text" name="q"
+                                placeholder="Search">
                             <div class="input-group-append">
                                 <button class="form-control btn btn-black border border-black rounded-2" type="submit">
                                     <span class="icon">
@@ -151,7 +170,7 @@
     </script>
     {% endblock %}
     <!-- Footer taken from mdbootstrap.com  -->
-    <div class="footer-container" >
+    <div class="footer-container">
         <!-- Footer -->
         <footer class="text-center text-lg-start text-white" style="background-color: #1c2331">
             <!-- Section: Social media -->
@@ -223,17 +242,21 @@
                                 style="width: 60px; background-color: #ee7818; height: 2px" />
                             <p>
                                 {% if user.is_authenticated %}
-                                <a href="{% url 'profile' %}" class="text-white"> <i class="fa-solid fa-user"></i> Account</a>
+                                <a href="{% url 'profile' %}" class="text-white"> <i class="fa-solid fa-user"></i>
+                                    Account</a>
                                 {% else %}
-                                <a href="{% url 'account_signup' %}" class="dropdown-item"><i class="fa-solid fa-user-plus"></i> Register</a>
-                                <a href="{% url 'account_login' %}" class="dropdown-item"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+                                <a href="{% url 'account_signup' %}" class="dropdown-item"><i
+                                        class="fa-solid fa-user-plus"></i> Register</a>
+                                <a href="{% url 'account_login' %}" class="dropdown-item"><i
+                                        class="fa-solid fa-right-to-bracket"></i> Login</a>
                                 {% endif %}
                             </p>
                             <p>
                                 <a href="{% url 'products' %}" class="text-white">Our Products</a>
                             </p>
                             <p>
-                                <a href="{% url 'home' %}" class="text-white"><i class="fa-solid fa-house"></i> Homepage</a>
+                                <a href="{% url 'home' %}" class="text-white"><i class="fa-solid fa-house"></i>
+                                    Homepage</a>
                             </p>
                             <p>
                                 <a href="{% url 'cart' %}" class="text-white">Your Basket</a>
