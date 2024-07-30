@@ -45,29 +45,37 @@
                         </li>
                         {% if user.is_authenticated %}
                         <li class="nav-item">
-                            <a class="nav-link text-white me-4" href="{% url 'profile' %}"><i
-                                    class="fa-solid fa-user"></i> My Account</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white me-4" href="{% url 'accout_logout' %}"><i
+                            <a class="nav-link text-white me-4" href="{% url 'account_logout' %}"><i
                                     class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
                         </li>
-                        {% else %}
                         <li class="nav-item">
-                            <a class="nav-link text-white me-4" href="{% url 'account_signup' %}"><i
-                                    class="fa-solid fa-user-plus"></i> Register</a>
+                            <a class="text-white nav-link me-4" href="{% url 'profile' %}" id="user-options" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false"><i class="fa-solid fa-user"></i> My Account</a>
+                                {% if request.user.is_superuser %}
+                                <li>
+                                    <a href="{% url 'add_product' %}" class="text-white nav-link me-4"><i class="fa-solid fa-gears"></i> Product Management</a>
+                                </li>
+                                {% endif %}
+                                
+                                <li class="nav-item">
+                                    <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-white{% endif %} nav-link"
+                                        href="{% url 'cart' %}">
+                                        <div><i class="fas fa-shopping-bag fa-lg"></i>
+                                            {% if grand_total %}
+                                            £{{ grand_total|floatformat:2 }}
+                                            {% else %}
+                                            £0.00
+                                            {% endif %}
+                                        </div>
+                                    </a>
+                                </li>
+                                {% else %}
+                                <li class="nav-item">
+                                    <a class="nav-link text-white me-4" href="{% url 'account_login' %}"><i class="fa-solid fa-right-to-bracket"></i>
+                                        Login</a>
+                                </li>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white me-4" href="{% url 'account_login' %}"><i
-                                    class="fa-solid fa-right-to-bracket"></i> Login</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white me-4" href="{% url 'cart' %}">Cart</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white me-4" href="{% url 'checkout' %}">Checkout</a>
-                        </li>
-                        {% endif %}
+                            {% endif %}
                     </ul>
                     <form method="GET" action="{% url 'products' %}">
                         <div class="input-group w-100">
@@ -86,45 +94,6 @@
             </div>
         </nav>
     </header>
-    <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-        <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-            <li class="list-inline-item dropdown">
-                <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false">
-                    <div class="text-center">
-                        <div><i class="fas fa-user fa-lg"></i></div>
-                        <p class="my-0">My Account</p>
-                    </div>
-                </a>
-                <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                    {% if request.user.is_authenticated %}
-                    {% if request.user.is_superuser %}
-                    <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-                    {% endif %}
-                    <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                    <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                    {% else %}
-                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                    {% endif %}
-                </div>
-            </li>
-            <li class="list-inline-item">
-                <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
-                    href="{% url 'cart' %}">
-                    <div class="text-center">
-                        <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                        <p class="my-0">
-                            {% if grand_total %}
-                            ${{ grand_total|floatformat:2 }}
-                            {% else %}
-                            $0.00
-                            {% endif %}
-                        </p>
-                    </div>
-                </a>
-            </li>
-        </ul>
     </div>
     <section class="container-fluid">
         <div class="row">
