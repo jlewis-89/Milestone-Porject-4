@@ -27,15 +27,30 @@
                 <tbody>
                     {% for item in cart_items %}
                     <tr>
-                        <td>{{ item.product.name }}</td>
-                        <td>{{ item.quantity }}</td>
-                        <td>${{ item.product.price }}</td>
-                        <td>${{ item.total }}</td>
+                        <td>
+                            {% include "cart/product-image.html" %}
+                        </td>
+                        <td>
+                            {% include "cart/product-info.html" %}
+                        </td>
+                        <td 
+                        >£{{ item.product.price }}</p>
+                        </td>
+                        <td>
+                            {% include "cart/order-form.html" %}
+                        </td>
+                        <td>
+                            £{{ item.product.price }}
+                        </td>
                     </tr>
                     {% endfor %}
+                    <tr>
+                        <td colspan="5" class="pt-5 text-right">
+                            {% include "cart/cart-total.html" %}
+                        </td>
+                    </tr>
                 </tbody>
             </table>
-            <p>Total: £{{ cart.total }}</p>
             <a href="{% url 'checkout' %}" class="btn btn-outline-success">Checkout</a>
             <a href="{% url 'products' %}" class="btn btn-outline-dark">Keep Shopping</a>
             <a href="{% url 'cart' %}" class="btn btn-outline-danger">Remove Item</a>
