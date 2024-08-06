@@ -20,9 +20,9 @@
             <p>First Name: {{user.firstname}}</p>
             <p>Last Name: {{user.lastname}}</p>
             <br>
-            <p><i class="fa-regular fa-envelope"></i> Email: {{ user.email }}</p>
+            <p>Email: {{ user.email }}</p>
             <br>
-            <p><i class="fa-regular fa-address-book"></i> Address: {{ user.address }}</p>
+            <p>Address: {{ user.address }}</p>
             <hr>
             <p>First Line: {{user.address.address1}}</p>
             <br>
@@ -34,9 +34,8 @@
             <br>
             <p>Postcode: {{user.address.postcode}}</p>
             <hr>
-            <p><i class="fa-solid fa-phone"></i> Phone: {{ user.phone_number }}</p>
+            <p>Phone: {{ user.phone_number }}</p>
             <br>
-            
         </div>
     </div>
     <hr>
@@ -101,6 +100,29 @@
                 <div class="col">
                     <h2><i class="fa-regular fa-star"></i> My Favorites</h2>
                 </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Remove</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in favorites %}
+                        <tr>
+                            <td>{{ item.product.name }}</td>
+                            <td>${{ item.product.price }}</td>
+                            <td>
+                                <a href="{% url 'remove_from_favorites' item.product.id %}"
+                                    class="btn btn-outline-dark">
+                                    <i class="fa-regular fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
             </div>
             <hr>
         </section>

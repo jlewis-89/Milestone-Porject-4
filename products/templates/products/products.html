@@ -29,6 +29,7 @@
                     <p class="card-text">{{ product.description }}</p>
                     <p class="card-text">Price: £{{ product.price }}</p>
                     <a href="{% url 'product_detail' product.id %}" class="btn btn-outline-dark">View Product</a>
+                    <a href="{% url 'add_favorite' product.id %}"><i class="fa-regular fa-star"></i></a>
                 </div>
             </div>
         </div>

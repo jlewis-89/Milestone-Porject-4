@@ -22,5 +22,12 @@ urlpatterns = [
     path('', views.profile, name='profile'),
     path('order_history/<order_number>',
          views.order_history,
-         name='order_history')
+         name='order_history'),
+    path('favorites/', views.favorites, name='favorites'),
+    path('add_favorite/<product_id>',
+         views.add_favorite,
+         name='add_favorite'),
+    path('remove_favorite/<product_id>',
+         views.remove_favorite, name='remove_favorite'),
+
 ]
