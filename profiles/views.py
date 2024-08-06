@@ -8,16 +8,6 @@ from checkout.models import Order
 # Create your views here.
 
 
-def profile(request):
-    """ A view to return the profiles page """
-    return render(request, 'profiles/profile.html')
-
-
-def update_profile(request):
-    """ A view to return the update_profiles page """
-    return render(request, 'profiles/update_profile.html')
-
-
 @login_required
 def profile(request):
     """ Display the user's profile. """

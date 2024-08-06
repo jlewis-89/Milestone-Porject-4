@@ -14,10 +14,17 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
 from django.urls import path
 from . import views
+from .webhooks import webhook
 
 urlpatterns = [
     path('', views.checkout, name='checkout'),
+    path('checkout_success/<order_number>',
+         views.checkout_success,
+         name='checkout_success'),
+    path('cache_checkout_data/',
+         views.cache_checkout_data,
+         name='cache_checkout_data'),
+    path('wh/', webhook, name='webhook'),
 ]
