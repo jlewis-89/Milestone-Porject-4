@@ -61,7 +61,7 @@
 
                         <li class="nav-item">
                             <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-white{% endif %} nav-link"
-                                href="{% url 'cart' %}">
+                                href="{% url 'view_cart' %}">
                                 <div><i class="fas fa-shopping-bag fa-lg"></i>
                                     {% if grand_total %}
                                     £{{ grand_total|floatformat:2 }}
@@ -214,7 +214,7 @@
                                 style="width: 60px; background-color: #ee7818; height: 2px" />
                             <p>
                                 {% if user.is_authenticated %}
-                                <a href="{% url 'profile' %}" class="text-white"> <i class="fa-solid fa-user"></i>
+                                <a href="{% url 'profile' %}" class="dropdown-item"> <i class="fa-solid fa-user"></i>
                                     Account</a>
                                 {% else %}
                                 <a href="{% url 'account_signup' %}" class="dropdown-item"><i
@@ -222,16 +222,10 @@
                                 <a href="{% url 'account_login' %}" class="dropdown-item"><i
                                         class="fa-solid fa-right-to-bracket"></i> Login</a>
                                 {% endif %}
-                            </p>
-                            <p>
-                                <a href="{% url 'products' %}" class="text-white">Our Products</a>
-                            </p>
-                            <p>
-                                <a href="{% url 'home' %}" class="text-white"><i class="fa-solid fa-house"></i>
+                                <a href="{% url 'products' %}" class="dropdown-item"><i class="fa-solid fa-shop"></i> Our Products</a>
+                                <a href="{% url 'home' %}" class="dropdown-item"><i class="fa-solid fa-house"></i>
                                     Homepage</a>
-                            </p>
-                            <p>
-                                <a href="{% url 'cart' %}" class="text-white">Your Basket</a>
+                                <a href="{% url 'view_cart' %}" class="dropdown-item"><i class="fa-solid fa-shopping-bag"></i> Your Basket</a>
                             </p>
                         </div>
                         <!-- Grid column -->

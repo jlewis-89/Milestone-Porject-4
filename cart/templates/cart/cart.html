@@ -33,8 +33,7 @@
                         <td>
                             {% include "cart/product-info.html" %}
                         </td>
-                        <td 
-                        >£{{ item.product.price }}</p>
+                        <td>£{{ item.product.price }}</p>
                         </td>
                         <td>
                             {% include "cart/order-form.html" %}
@@ -53,7 +52,7 @@
             </table>
             <a href="{% url 'checkout' %}" class="btn btn-outline-success">Checkout</a>
             <a href="{% url 'products' %}" class="btn btn-outline-dark">Keep Shopping</a>
-            <a href="{% url 'cart' %}" class="btn btn-outline-danger">Remove Item</a>
+            <a href="{% url 'view_cart' %}" class="btn btn-outline-danger">Remove Item</a>
         </div>
     </div>
 </div>
