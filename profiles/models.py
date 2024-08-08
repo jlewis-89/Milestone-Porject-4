@@ -12,7 +12,7 @@ class UserProfile(models.Model):
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     firstname = models.CharField(max_length=80,
-                                    null=True, blank=True)
+                                 null=True, blank=True)
     lastname = models.CharField(max_length=80, null=True, blank=True)
     phone_number = models.CharField(max_length=20,
                                     null=True, blank=True)
@@ -27,19 +27,22 @@ class UserProfile(models.Model):
     postcode = models.CharField(max_length=20,
                                 null=True, blank=True)
     email = models.CharField(max_length=254,
-                                null=True, blank=True)
+                             null=True, blank=True)
+
+    @property
+    def favorites(self):
+        return Favorite.objects.filter(user=self.user)
 
     def __str__(self):
         return self.user.username
-    
+
 
 class Favorite(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    
+
     def __str__(self):
         return self.product.name
-
 
 
 @receiver(post_save, sender=User)

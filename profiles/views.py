@@ -7,7 +7,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse
 from checkout.models import Order
 from products.models import Product
-from profiles.models import Favorite
+from .models import Favorite
 # Create your views here.
 
 
@@ -56,15 +56,16 @@ def order_history(request, order_number):
     return render(request, template, context)
 
 
-def favorites(request):
+def favorites(request, product_id):
     """ Display the user's favorite products. """
-    profile = get_object_or_404(UserProfile, user=request.user)
+    product = get_object_or_404(Product, pk=product_id)
+    profile = get_object_or_404(Favorite, user=request.user)
     favorites = profile.favorites.all()
 
-    template = 'profiles/favorites.html'
+    template = 'profiles/profiles.html'
     context = {
         'favorites': favorites,
-        'on_favorites_page': True
+        'on_profile_page': True
     }
 
     return render(request, template, context)
@@ -73,20 +74,17 @@ def favorites(request):
 def add_favorite(request, product_id):
     """ Add a product to the user's favorites. """
     product = get_object_or_404(Product, pk=product_id)
-    profile = get_object_or_404(UserProfile, user=request.user)
-
-    if product in profile.favorites.all():
-        messages.info(request, 'This product is already in your favorites')
-    else:
-        profile.favorites.add(product)
-        messages.success(request, 'Product added to your favorites')
+    profile = get_object_or_404(Favorite, user=request.user)
+    if not Favorite.objects.filter(user=profile.user, product=product).exists():
+        Favorite.objects.create(user=profile.user, product=product)
 
     return redirect(reverse('product_detail', args=[product_id]))
+
 
 def remove_favorite(request, product_id):
     """ Remove a product from the user's favorites. """
     product = get_object_or_404(Product, pk=product_id)
-    profile = get_object_or_404(UserProfile, user=request.user)
+    profile = get_object_or_404(Favorite, user=request.user)
 
     if product in profile.favorites.all():
         profile.favorites.remove(product)
@@ -95,4 +93,3 @@ def remove_favorite(request, product_id):
         messages.info(request, 'This product is not in your favorites')
 
     return redirect(reverse('product_detail', args=[product_id]))
-

@@ -24,10 +24,10 @@ urlpatterns = [
          views.order_history,
          name='order_history'),
     path('favorites/', views.favorites, name='favorites'),
-    path('add_favorite/<product_id>',
+    path('add_favorite/<int:product_id>',
          views.add_favorite,
          name='add_favorite'),
-    path('remove_favorite/<product_id>',
+    path('remove_favorite/<int:product_id>',
          views.remove_favorite, name='remove_favorite'),
 
 ]

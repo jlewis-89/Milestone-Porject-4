@@ -104,17 +104,18 @@
                     <thead>
                         <tr>
                             <th>Product</th>
-                            <th>Price</th>
+                            <th>Price £</th>
                             <th>Remove</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {% for item in favorites %}
+                        {% for favorite in favorites %}
                         <tr>
-                            <td>{{ item.product.name }}</td>
-                            <td>${{ item.product.price }}</td>
+                            <td>${{ favorite.product.image }}</td>
+                            <td>{{ favorite.product.name }}</td>
+                            <td>£{{ favorite.product.price }}</td>
                             <td>
-                                <a href="{% url 'remove_from_favorites' item.product.id %}"
+                                <a href="{% url 'remove_from_favorites' product.id %}"
                                     class="btn btn-outline-dark">
                                     <i class="fa-regular fa-trash"></i>
                                 </a>
@@ -133,4 +134,5 @@
 {% block postloadjs %}
 {{ block.super }}
 <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
+<script type="text/javascript" src="{% static 'profiles/js/favorites.js' %}"></script>
 {% endblock %}

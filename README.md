@@ -11,8 +11,7 @@ Welcome to Crystal's Cakes! This is a full-stack e-commerce website built using 
 
 - **Backend**:
   - Django (Python web framework)
-  - PostgreSQL (Database)
-  - RESTful APIs
+  - SQLite3 (Database)
 
 ## Table of Contents
 
@@ -30,24 +29,37 @@ Welcome to Crystal's Cakes! This is a full-stack e-commerce website built using 
 
 ## About
 
-Crystal's Cakes aims to provide an intuitive and seamless shopping experience for users. Whether you're a customer browsing products or an admin managing inventory, our platform has you covered.
+Crystal's Cakes is an online e-commerce store where you can buy baked goods and products listed in the online store, it is enabled to allow users to register browse, save items, add items to a basket and checkout, with the appropriate email confirmations
 
 ## Purpose
+Crystal's Cakes is an online e-commerce store where you can buy baked goods and products listed in the online store, it is enabled to allow users to register browse, save items, add items to a basket and checkout, with appropriate alerts and email confirmations.
+
+This project has been designed to suit the criteria laid out in the Milestone 4 Project of Code Institute and City of Bristols Marking Criteria in order to pass the final qualification.
 
 ### Project Goals
+To build a functioning e-commerce website
+Become familiar with the django framework
+Enable user authentication
+Build a product portfolio for customers and user to browse
+Enable payment through stripe
 
 ### Developer Goals
+Become familiar with Django as a framework
+Develop skills in full stack development
+Build a functioning final project
 
 ## Software
-IDE - VSCode
-Wireframing & Prototyping - Figma
-Image Conversion - XnConvert
+- IDE - VSCode
+- Wireframing & Prototyping - Figma / Draw.io
+- Data Schema - Draw.io
+- Image Conversion - XnConvert
 
 ## Design
 
 ## UI
 ### Typography
 ### Navigation
+Bootstrap 5 Template [link]
 ### Colour Scheme
 ### Wireframes
 
@@ -75,25 +87,35 @@ Image Conversion - XnConvert
 - Cart
 - Profiles
 - Checkout
-- Media
-
-
+- Media (Static Folders)
 
 
 ## Testing
+### User Stories
+### HTML
+### CSS
+### Javascript
+### Alpha Testing
+### Beta Testing
+### Django Testing
+
+## Buges & Fixes
+Fixtures data
+Add to cart
+Favorites functionality
 
 ## Deployment
 
 ## Credit
-Images taken from Whip & Drizzle Instagram
-Footer from MDBoostrap.com - https://mdbootstrap.com/snippets/standard/mdbootstrap/2885008?view=side
+- Code Institute Walkthrough Project Boutique Ado has been relied on heavily throughout the project development with numerous code snippets re-used and re-purposed.
 
+- Images taken from Whip & Drizzle Instagram
 
+- Footer from MDBoostrap.com - https://mdbootstrap.com/snippets/standard/mdbootstrap/2885008?view=side
 
 ## License
-
 N/A
 
 ## Status
-
+In Development
 ---

@@ -33,7 +33,10 @@ def cart_contents(request):
                     'size': size,
                 })
 
-    delivery = 3
+    if product_count:
+        delivery = 3
+    else:
+        delivery = 0
 
     grand_total = delivery + total
 
