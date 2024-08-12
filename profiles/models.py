@@ -38,7 +38,7 @@ class Favorite(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"{self.user.username} - {self.product.name}"
+        return f"{self.user.username} - {self.product.name} - {self.product.image}"
 
 
 @receiver(post_save, sender=User)

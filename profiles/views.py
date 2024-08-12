@@ -59,11 +59,16 @@ def order_history(request, order_number):
 @login_required
 def favorites_list(request):
     favorites = Favorite.objects.filter(user=request.user)
-    return render(request, 'favorites_list.html', {'favorites': favorites})
+    return render(request, 'profiles/favorites_list.html', {'favorites': favorites})
 
 
 @login_required
 def add_to_favorites(request, product_id):
     product = Product.objects.get(id=product_id)
     Favorite.objects.get_or_create(user=request.user, product=product)
+    return redirect('favorites_list')
+
+def remove_from_favorites(request, product_id):
+    favorite = get_object_or_404(Favorite, user=request.user, product_id=product_id)
+    favorite.delete()
     return redirect('favorites_list')

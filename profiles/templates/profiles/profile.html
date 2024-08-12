@@ -12,33 +12,6 @@
 {% endblock %}
 {% block content %}
 <div class="container-fluid">
-    <div class="row">
-        <div class="col">
-            <h2><i class="fa-solid fa-user"></i> My Account</h2>
-            <hr>
-            <p><i class="fa-regular fa-user"></i> Username: {{ user.username }}</p>
-            <p>First Name: {{user.firstname}}</p>
-            <p>Last Name: {{user.lastname}}</p>
-            <br>
-            <p>Email: {{ user.email }}</p>
-            <br>
-            <p>Address: {{ user.address }}</p>
-            <hr>
-            <p>First Line: {{user.address.address1}}</p>
-            <br>
-            <p>Last Line: {{user.address.address2}}</p>
-            <br>
-            <p>City: {{user.address.town_or_city}}</p>
-            <br>
-            <p>County: {{user.address.county}}</p>
-            <br>
-            <p>Postcode: {{user.address.postcode}}</p>
-            <hr>
-            <p>Phone: {{ user.phone_number }}</p>
-            <br>
-        </div>
-    </div>
-    <hr>
     <section>
         <div class="row">
             <div class="col-12 col-lg-6">
@@ -103,18 +76,7 @@
                     <h2><i class="fa-regular fa-star"></i> My Favorites</h2>
                     <hr>
                 </div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Product</th>
-                            <th>Price £</th>
-                            <th>Remove</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% include 'profiles/favorites_list.html' %}
-                    </tbody>
-                </table>
+                {% include 'profiles/favorites_list.html' %}
             </div>
             <hr>
         </section>

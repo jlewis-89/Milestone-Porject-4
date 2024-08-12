@@ -1,12 +1,23 @@
-{% for favorite in favorites %}
-<tr>
-    <td>${{ favorite.product.image }}</td>
-    <td>{{ favorite.product.name }}</td>
-    <td>£{{ favorite.product.price }}</td>
-    <td>
-        <!-- <a href="{% url 'remove_from_favorites' product.id %}" class="btn btn-outline-dark">
-            <i class="fa-regular fa-trash"></i> -->
-        </a>
-    </td>
-</tr>
-{% endfor %}
+<table>
+    <thead>
+        <tr>
+            <th>Product</th>
+            <th>Price £</th>
+            <th>Remove</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for favorite in favorites %}
+        <tr>
+            <td>{{ favorite.product.image.url }}</td>
+            <td>{{ favorite.product.name }}</td>
+            <td>£{{ favorite.product.price }}</td>
+            <td>
+                <a href="{% url 'remove_from_favorites' favorite.product.id %}" class="btn btn-outline-dark">
+                    <i class="fa-regular fa-trash"></i> Remove
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
