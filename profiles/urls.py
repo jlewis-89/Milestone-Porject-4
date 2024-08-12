@@ -23,11 +23,9 @@ urlpatterns = [
     path('order_history/<order_number>',
          views.order_history,
          name='order_history'),
-    path('favorites/', views.favorites, name='favorites'),
-    path('add_favorite/<int:product_id>',
-         views.add_favorite,
-         name='add_favorite'),
-    path('remove_favorite/<int:product_id>',
-         views.remove_favorite, name='remove_favorite'),
-
+    # path('remove_favorite/<int:product_id>',
+    #      views.remove_favorite, name='remove_favorite'),
+    path('add_to_favorites/<int:product_id>/',
+         views.add_to_favorites, name='add_to_favorites'),
+    path('favorites/', views.favorites_list, name='favorites_list'),
 ]

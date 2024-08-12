@@ -52,7 +52,7 @@
     </section>
     <hr>
     <div class="row row-cols-md-2">
-        <section class="container ">
+        <section>
             <div class="row">
                 <div class="col">
                     <h2><i class="fa-solid fa-cake-candles"></i> My Orders</h2>
@@ -93,12 +93,15 @@
                         </tbody>
                     </table>
                 </div>
+                <hr>
             </div>
         </section>
+
         <section class="container">
             <div class="row">
                 <div class="col">
                     <h2><i class="fa-regular fa-star"></i> My Favorites</h2>
+                    <hr>
                 </div>
                 <table>
                     <thead>
@@ -109,19 +112,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        {% for favorite in favorites %}
-                        <tr>
-                            <td>${{ favorite.product.image }}</td>
-                            <td>{{ favorite.product.name }}</td>
-                            <td>£{{ favorite.product.price }}</td>
-                            <td>
-                                <a href="{% url 'remove_from_favorites' product.id %}"
-                                    class="btn btn-outline-dark">
-                                    <i class="fa-regular fa-trash"></i>
-                                </a>
-                            </td>
-                        </tr>
-                        {% endfor %}
+                        {% include 'profiles/favorites_list.html' %}
                     </tbody>
                 </table>
             </div>

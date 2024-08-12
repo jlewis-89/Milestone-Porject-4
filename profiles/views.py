@@ -56,40 +56,14 @@ def order_history(request, order_number):
     return render(request, template, context)
 
 
-def favorites(request, product_id):
-    """ Display the user's favorite products. """
-    product = get_object_or_404(Product, pk=product_id)
-    profile = get_object_or_404(Favorite, user=request.user)
-    favorites = profile.favorites.all()
-
-    template = 'profiles/profiles.html'
-    context = {
-        'favorites': favorites,
-        'on_profile_page': True
-    }
-
-    return render(request, template, context)
+@login_required
+def favorites_list(request):
+    favorites = Favorite.objects.filter(user=request.user)
+    return render(request, 'favorites_list.html', {'favorites': favorites})
 
 
-def add_favorite(request, product_id):
-    """ Add a product to the user's favorites. """
-    product = get_object_or_404(Product, pk=product_id)
-    profile = get_object_or_404(Favorite, user=request.user)
-    if not Favorite.objects.filter(user=profile.user, product=product).exists():
-        Favorite.objects.create(user=profile.user, product=product)
-
-    return redirect(reverse('product_detail', args=[product_id]))
-
-
-def remove_favorite(request, product_id):
-    """ Remove a product from the user's favorites. """
-    product = get_object_or_404(Product, pk=product_id)
-    profile = get_object_or_404(Favorite, user=request.user)
-
-    if product in profile.favorites.all():
-        profile.favorites.remove(product)
-        messages.success(request, 'Product removed from your favorites')
-    else:
-        messages.info(request, 'This product is not in your favorites')
-
-    return redirect(reverse('product_detail', args=[product_id]))
+@login_required
+def add_to_favorites(request, product_id):
+    product = Product.objects.get(id=product_id)
+    Favorite.objects.get_or_create(user=request.user, product=product)
+    return redirect('favorites_list')

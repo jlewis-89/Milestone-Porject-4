@@ -91,7 +91,7 @@
                             <a href="{% url 'products' %}" class="btn btn-outline-dark">BACK TO STORE
                             </a>
                             <input type="submit" class="btn btn-outline-success" value="ADD TO CART">
-                            <a href="{% url 'add_favorite' product.id %}"><i class="fa-regular fa-star"
+                            <a href="{% url 'add_to_favorites' product.id %}"><i class="fa-regular fa-star"
                                     id="fav-star"></i></a>
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">

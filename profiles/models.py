@@ -29,10 +29,6 @@ class UserProfile(models.Model):
     email = models.CharField(max_length=254,
                              null=True, blank=True)
 
-    @property
-    def favorites(self):
-        return Favorite.objects.filter(user=self.user)
-
     def __str__(self):
         return self.user.username
 
@@ -42,7 +38,7 @@ class Favorite(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.product.name
+        return f"{self.user.username} - {self.product.name}"
 
 
 @receiver(post_save, sender=User)

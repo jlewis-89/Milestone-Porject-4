@@ -222,10 +222,12 @@
                                 <a href="{% url 'account_login' %}" class="dropdown-item"><i
                                         class="fa-solid fa-right-to-bracket"></i> Login</a>
                                 {% endif %}
-                                <a href="{% url 'products' %}" class="dropdown-item"><i class="fa-solid fa-shop"></i> Our Products</a>
+                                <a href="{% url 'products' %}" class="dropdown-item"><i class="fa-solid fa-shop"></i>
+                                    Our Products</a>
                                 <a href="{% url 'home' %}" class="dropdown-item"><i class="fa-solid fa-house"></i>
                                     Homepage</a>
-                                <a href="{% url 'view_cart' %}" class="dropdown-item"><i class="fa-solid fa-shopping-bag"></i> Your Basket</a>
+                                <a href="{% url 'view_cart' %}" class="dropdown-item"><i
+                                        class="fa-solid fa-shopping-bag"></i> Your Basket</a>
                             </p>
                         </div>
                         <!-- Grid column -->
@@ -245,8 +247,6 @@
                     <!-- Grid row -->
                 </div>
             </section>
-            <!-- Section: Links  -->
-
             <!-- Copyright -->
             <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
                 © <span id="year"></span> Copyright:
@@ -255,7 +255,7 @@
             <script>
                 document.getElementById("year").innerHTML = new Date().getFullYear();
             </script>
-            <!-- Copyright -->
+            <script type="text/javascript" src="{% static 'profiles/js/favorites.js' %}"></script>
         </footer>
     </div>
 </body>
