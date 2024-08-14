@@ -34,9 +34,9 @@ img {
 /* toasts walkthrough project CI  */
 .message-container {
     position: fixed;
-    top: 72px;
-    right: 15px;
-    z-index: 99999999999;
+    top: 96px;
+    right: 20px;
+    z-index: 99999999;
 }
 
 .custom-toast {
@@ -100,7 +100,7 @@ img {
 }
 
 .allauth-form-inner-content a {
-    color: #17a2b8;
+    color: #ffffff;
     /* text-info */
 }
 
