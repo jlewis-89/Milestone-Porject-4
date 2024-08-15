@@ -120,13 +120,13 @@ def checkout(request):
                 order_form = OrderForm(initial={
                     'full_name': profile.user.get_full_name(),
                     'email': profile.user.email,
-                    'phone_number': profile.default_phone_number,
-                    'country': profile.default_country,
-                    'postcode': profile.default_postcode,
-                    'town_or_city': profile.default_town_or_city,
-                    'address1': profile.default_address1,
-                    'address2': profile.default_address2,
-                    'county': profile.default_county,
+                    'phone_number': profile.phone_number,
+                    'country': profile.country,
+                    'postcode': profile.postcode,
+                    'town_or_city': profile.town_or_city,
+                    'address1': profile.address1,
+                    'address2': profile.address2,
+                    'county': profile.county,
                 })
             except UserProfile.DoesNotExist:
                 order_form = OrderForm()
@@ -141,9 +141,9 @@ def checkout(request):
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
-        'stripe_public_key': pk_test_51Po1wPP4VJdHXu7ZMtG8r9uvhmQlM6GLEBoQqcn3NTf09DXZaiZEnVRXy3M1eyZKlj9sp5iDiwYysWTI9X4kvCOw00YeKoiRM8,
+        'stripe_public_key': stripe_public_key,
         # stripe_public_key,
-        'client_secret': sk_test_51Po1wPP4VJdHXu7ZEsAtqIzkk6WDZSgAcrTYSsjBFiaFoiYFWHiaQfgQciUPCCW7TASo7ZATTgDRlS88uVY9xDex00Md7cL2oQ
+        'client_secret': intent.client_secret,
         # intent.client_secret,
     }
 
