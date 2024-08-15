@@ -66,13 +66,13 @@ class StripeWH_Handler:
         if username != 'AnonymousUser':
             profile = UserProfile.objects.get(user__username=username)
             if save_info:
-                profile.default_phone_number = shipping_details.phone
-                profile.default_country = shipping_details.address.country
-                profile.default_postcode = shipping_details.address.postal_code
-                profile.default_town_or_city = shipping_details.address.city
-                profile.default_street_address1 = shipping_details.address.line1
-                profile.default_street_address2 = shipping_details.address.line2
-                profile.default_county = shipping_details.address.state
+                profile.phone_number = shipping_details.phone
+                profile.country = shipping_details.address.country
+                profile.postcode = shipping_details.address.postal_code
+                profile.town_or_city = shipping_details.address.city
+                profile.address1 = shipping_details.address.line1
+                profile.address2 = shipping_details.address.line2
+                profile.county = shipping_details.address.state
                 profile.save()
 
         order_exists = False
@@ -86,8 +86,8 @@ class StripeWH_Handler:
                     country__iexact=shipping_details.address.country,
                     postcode__iexact=shipping_details.address.postal_code,
                     town_or_city__iexact=shipping_details.address.city,
-                    street_address1__iexact=shipping_details.address.line1,
-                    street_address2__iexact=shipping_details.address.line2,
+                    address1__iexact=shipping_details.address.line1,
+                    address2__iexact=shipping_details.address.line2,
                     county__iexact=shipping_details.address.state,
                     grand_total=grand_total,
                     original_bag=bag,
@@ -115,8 +115,8 @@ class StripeWH_Handler:
                     country=shipping_details.address.country,
                     postcode=shipping_details.address.postal_code,
                     town_or_city=shipping_details.address.city,
-                    street_address1=shipping_details.address.line1,
-                    street_address2=shipping_details.address.line2,
+                    address1=shipping_details.address.line1,
+                    address2=shipping_details.address.line2,
                     county=shipping_details.address.state,
                     original_bag=bag,
                     stripe_pid=pid,
