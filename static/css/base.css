@@ -1,5 +1,7 @@
 html {
     height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -10,19 +12,19 @@ body {
     background-color: #dee2e6b4;
     align-content: center;
     background-size: cover;
-    height: 100vh;
     margin: 0;
+    padding: 0;
     display: grid;
 }
 
-.header-container {
-    padding-top: 116px;
+#page-wrapper {
+    position: relative;
+    min-height: 100vh;
 }
 
 .footer-container {
-    position: relative;
+    position: static;
     bottom: 0;
-    margin-top: auto;
     container: flexbox;
 }
 
@@ -106,7 +108,7 @@ img {
 
 .favstar,
 .update-link,
-.remove-link {
+.remove-item {
     cursor: pointer;
 }
 
