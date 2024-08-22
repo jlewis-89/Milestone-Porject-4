@@ -5,6 +5,10 @@ from django.views.decorators.csrf import csrf_exempt
 
 from checkout.webhook_handler import StripeWH_Handler
 
+import sys
+# Replace '/path/to/stripe/module' with the actual path to the stripe module search-ms:displayname=Search%20Results%20in%20MSP4&crumb=location:C%3A%5CUsers%5Cjlewi%5CRepositories%5CMilestone-Project-4%20Crystals%20Cakes%5CMSP4\stripe
+sys.path.append('/path/to/stripe/module')
+
 import stripe
 
 

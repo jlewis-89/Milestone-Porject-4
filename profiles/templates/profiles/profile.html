@@ -18,7 +18,72 @@
                 <p class="text-muted">Customer Information</p>
                 <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
                     {% csrf_token %}
-                    {{ form|crispy }}
+                    <div class="form-group row">
+                        <label for="user" class="col-sm-3 col-form-label">User Name</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="user" name="user"
+                                value="{{ userprofile.user }}">
+                        </div>
+                    </div>
+                    <div class="form-group
+                        row">
+                        <label for=" Phone" class="col-sm-3 col-form-label">Phone Number</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="Phone" name="Phone"
+                                value="{{ userprofile.phone_number }}">
+                        </div>
+                    </div>
+                    <div class="form-group
+                        row">
+                        <label for=" Email" class="col-sm-3 col-form-label">Email Address</label>
+                        <div class="col-sm-9">
+                            <input type="email" class="form-control" id="Email" name="Email" value="{{ user.email }}">
+                        </div>
+                    </div>
+                    <div class="form-group
+                        row">
+                        <label for=" Country" class="col-sm-3 col-form-label">Country</label>
+                        <div class="col-sm-9">
+                            <select name="Country" id="Country" class="form-control countryfield">
+                                <option value="{{ userprofile.country }}">{{ userprofile.country }}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group
+                        row">
+                        <label for=" Postcode" class="col-sm-3 col-form-label">Postcode</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="Postcode" name="Postcode"
+                                value="{{ userprofile.postcode }}">
+                        </div>
+                    </div>
+                    <div class="form-group
+                        row">
+                        <label for=" TownOrCity" class="col-sm-3 col-form-label">Town or City</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="TownOrCity" name="TownOrCity"
+                                value="{{ userprofile.town_or_city }}">
+                        </div>
+                    </div>
+                    <div class="form-group
+                        row">
+                        <label for="  Address1" class="col-sm-3 col-form-label"> Address 1</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="Address1" name="Address1"
+                                value="{{ userprofile.address1 }}">
+                        </div>
+                    </div>
+                    <div class="form-group
+                        row">
+                        <label for="  Address2" class="col-sm-3 col-form-label"> Address 2</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="Address2" name="Address2"
+                                value="{{ userprofile.address2 }}">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-dark">Update</button>
+                    <a href="{% url 'password_reset' %}" class="btn btn-outline-dark">Change Password</a>
+                    <a href="{% url 'order_history' %}" class="btn btn-outline-dark">Order History</a>
                     <a href="{% url 'profile' %}" class="btn btn-outline-dark">Update My Account</a>
                 </form>
             </div>
@@ -77,6 +142,18 @@
                     <hr>
                 </div>
                 {% include 'profiles/favorites_list.html' %}
+                {% for favorite in favorites %}
+                <tr>
+                    <td>{{ favorite.product.image.url }}</td>
+                    <td>{{ favorite.product.name }}</td>
+                    <td>£{{ favorite.product.price }}</td>
+                    <td>
+                        <a href="{% url 'remove_from_favorites' favorite.product.id %}" class="btn btn-outline-dark">
+                            <i class="fa-regular fa-trash"></i> Remove
+                        </a>
+                    </td>
+                </tr>
+                {% endfor %}
             </div>
             <hr>
         </section>
