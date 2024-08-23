@@ -28,11 +28,12 @@ def profile(request):
     else:
         form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
-
+    favorites = Favorite.objects.filter(user=request.user)
     template = 'profiles/profile.html'
     context = {
         'form': form,
         'orders': orders,
+        'favorites': favorites,
         'on_profile_page': True
     }
 
@@ -57,6 +58,11 @@ def order_history(request, order_number):
 
 
 @login_required
+def password_reset(request):
+    return render(request, 'templates/password_reset.html')
+
+
+@login_required
 def favorites_list(request):
     favorites = Favorite.objects.filter(user=request.user)
     return render(request, 'profiles/favorites_list.html', {'favorites': favorites})
@@ -67,10 +73,14 @@ def add_to_favorites(request, product_id):
     product = Product.objects.get(id=product_id)
     Favorite.objects.get_or_create(user=request.user, product=product)
     messages.success(request, 'Product added to favorites')
-    return redirect('favorites_list')
+    return redirect('products')
+
 
 def remove_from_favorites(request, product_id):
-    favorite = get_object_or_404(Favorite, user=request.user, product_id=product_id)
+    favorite = get_object_or_404(
+        Favorite, user=request.user, product_id=product_id)
     favorite.delete()
     messages.success(request, 'Product removed from favorites')
-    return redirect('favorites_list')
+    template = 'profiles/profile.html'
+
+    return profile(request)

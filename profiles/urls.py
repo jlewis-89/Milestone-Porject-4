@@ -28,4 +28,5 @@ urlpatterns = [
     path('add_to_favorites/<int:product_id>/',
          views.add_to_favorites, name='add_to_favorites'),
     path('favorites/', views.favorites_list, name='favorites_list'),
+    path('password_reset/', views.password_reset, name='password_reset'),
 ]
