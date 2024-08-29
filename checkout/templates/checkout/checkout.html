@@ -78,18 +78,62 @@
                 {% csrf_token %}
                 <fieldset class="rounded px-3 mb-5">
                     <legend class="fieldset-label small text-black px-2 w-auto">Details</legend>
-                    {{ order_form.full_name.as_ul }}
-                    {{ order_form.email.as_ul }}
+                    <hr>
+                    <div class="row">
+                        <label for="full_name">Full
+                            Name</label><input type="text" value="{{ order_form.full_name.as_ul }}" required>
+                        {{ order_form.full_name.as_p }}
+                    </div>
+                    <div class="row">
+                        <label for="phone_number">Phone
+                            Number</label><input type="text" placeholder="{{ order_form.phone_number.as_ul }}"
+                            value="{{ order_form.phone_number.as_ul }}" required>
+                        {{ order_form.phone_number.as_p }}
+                    </div>
+                    <div class="row">
+                        <label for="email">Email</label><input type="text" value="{{ order_form.email.as_ul }}"
+                            required>
+                        {{ order_form.email.as_p }}
+                    </div>
                 </fieldset>
                 <fieldset class="rounded px-3 mb-5">
-                    <legend class="fieldset-label small text-black px-2 w-auto">Delivery</legend>
-                    {{ order_form.phone_number.as_ul }}
-                    {{ order_form.address1.as_ul }}
-                    {{ order_form.address2.as_ul }}
-                    {{ order_form.town_or_city.as_ul}}
-                    {{ order_form.county.as_ul }}
-                    {{ order_form.postcode.as_ul }}
-                    {{ order_form.country.as_ul }}
+                    <legend class="fieldset-label small text-black px-2 w-auto">Delivery Details</legend>
+                    <hr>
+
+                    <div class="row">
+                        <label for="address1">Address Line
+                            1</label><input type="text" placeholder="{{ order_form.address1.as_ul }}"
+                            value="{{ order_form.address1.as_ul }}" required>
+                        {{ order_form.address1.as_p }}
+                    </div>
+                    <div class="row">
+                        <label for="address2">Address Line
+                            2</label><input type="text" placeholder="{{ order_form.address2.as_ul }}"
+                            value="{{ order_form.address2.as_ul }}">
+                        {{ order_form.address2.as_p }}
+                    </div>
+                    <div class="row">
+                        <label for="town_or_city">Town or
+                            City</label><input type="text" placeholder="{{ order_form.town_or_city.as_ul }}"
+                            value="{{ order_form.town_or_city.as_ul }}" required>
+                        {{ order_form.town_or_city.as_p }}
+                    </div>
+                    <div class="row">
+                        <label for="county">County</label><input type="text" placeholder="{{ order_form.county.as_ul }}"
+                            value="{{ order_form.county.as_ul }}">
+                        {{ order_form.county.as_p }}
+                    </div>
+                    <div class="row">
+                        <label for="postcode">Postcode</label><input type="text" value="{{ order_form.postcode.as_ul }}" pattern="^([A-PR-UWYZ0-9][A-HK-Y0-9][AEHMNPRTVXY0-9]?[ABEHMNPRVWXY0-9]? {0,2}[0-9][ABD-HJLN-UW-Z]{2}|GIR ?0AA)$"
+                            required>
+                        {{ order_form.postcode.as_p }}
+                    </div>
+                    <div class="row">
+                        <label for="country">Country</label><input type="text"
+                            placeholder="{{ order_form.country.as_ul }}" value="{{ order_form.country.as_ul }}"
+                            required>
+                        {{ order_form.country.as_p }}
+                    </div>
                     <div class="form-check form-check-inline float-right mr-0">
                         {% if user.is_authenticated %}
                         <label class="form-check-label" for="id-save-info">Save this delivery information to my

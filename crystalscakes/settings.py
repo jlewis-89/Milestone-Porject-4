@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'home',
     'products',
     'cart',
-    'profiles',  # db required
+    'profiles',
     'checkout',
     'media',
     'crispy_forms',

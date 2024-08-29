@@ -19,14 +19,13 @@ class UserProfileForm(forms.ModelForm):
             'lastname': 'Last Name',
             'email': 'Email Address',
             'phone_number': 'Phone Number',
-            'postcode': 'Postal Code',
-            'town_or_city': 'Town or City',
             'address1': 'Street Address 1',
             'address2': 'Street Address 2',
+            'town_or_city': 'Town or City',
+            'postcode': 'Postal Code',
             'county': 'County, State or Locality',
         }
 
-        self.fields['phone_number'].widget.attrs['autofocus'] = True
         for field in self.fields:
             if field != 'country':
                 if self.fields[field].required:

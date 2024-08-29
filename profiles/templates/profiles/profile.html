@@ -26,53 +26,23 @@
                         </div>
                     </div>
                     <br>
-                    <div class="form-group
-                        row">
+                    <div class="form-group row">
                         <label for="Phone" class="col-sm-3 col-form-label">Phone Number</label>
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" id="Phone" name="Phone"
-                                value="{{ userprofile.phone_number }}">
+                            <input type="number" class="form-control" id="Phone" name="Phone"
+                                value="{{ userprofile.phone_number }}" minlength="10" maxlength="12">
                         </div>
                     </div>
                     <br>
-                    <div class="form-group
-                        row">
+                    <div class="form-group row">
                         <label for="Email" class="col-sm-3 col-form-label">Email Address</label>
                         <div class="col-sm-9">
                             <input type="email" class="form-control" id="Email" name="Email" value="{{ user.email }}">
                         </div>
                     </div>
                     <br>
-                    <div class="form-group
-                        row">
-                        <label for="Country" class="col-sm-3 col-form-label">Country</label>
-                        <div class="col-sm-9">
-                            <select name="Country" id="Country" class="form-control countryfield">
-                                <option value="{{ userprofile.country }}"></option>
-                            </select>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="form-group
-                        row">
-                        <label for="Postcode" class="col-sm-3 col-form-label">Postcode</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" id="Postcode" name="Postcode"
-                                value="{{ userprofile.postcode }}">
-                        </div>
-                    </div>
-                    <br>
-                    <div class="form-group
-                        row">
-                        <label for="TownOrCity" class="col-sm-3 col-form-label">Town or City</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" id="TownOrCity" name="TownOrCity"
-                                value="{{ userprofile.town_or_city }}">
-                        </div>
-                    </div>
-                    <br>
-                    <div class="form-group
-                        row">
+
+                    <div class="form-group row">
                         <label for="Address1" class="col-sm-3 col-form-label"> Address 1</label>
                         <div class="col-sm-9">
                             <input type="text" class="form-control" id="Address1" name="Address1"
@@ -80,12 +50,37 @@
                         </div>
                     </div>
                     <br>
-                    <div class="form-group
-                        row">
+                    <div class="form-group row">
                         <label for="Address2" class="col-sm-3 col-form-label"> Address 2</label>
                         <div class="col-sm-9">
                             <input type="text" class="form-control" id="Address2" name="Address2"
                                 value="{{ userprofile.address2 }}">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group row">
+                        <label for="TownOrCity" class="col-sm-3 col-form-label">Town or City</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="TownOrCity" name="TownOrCity"
+                                value="{{ userprofile.town_or_city }}">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group row">
+                        <label for="Postcode" class="col-sm-3 col-form-label">Postcode</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="Postcode" name="Postcode"
+                                value="{{ userprofile.postcode }}"
+                                pattern="^([A-PR-UWYZ0-9][A-HK-Y0-9][AEHMNPRTVXY0-9]?[ABEHMNPRVWXY0-9]? {0,2}[0-9][ABD-HJLN-UW-Z]{2}|GIR ?0AA)$">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group row">
+                        <label for="Country" class="col-sm-3 col-form-label">Country</label>
+                        <div class="col-sm-9">
+                            <select name="Country" id="Country" class="form-control countryfield">
+                                <option value="{{ userprofile.country }}"></option>
+                            </select>
                         </div>
                     </div>
                     <br>
