@@ -1,4 +1,5 @@
 bin
+Scripts
 *.sqlite3
 *.pyc
 *lib
