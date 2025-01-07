@@ -19,7 +19,7 @@ body {
 
 #page-wrapper {
     position: relative;
-    min-height: 100vh;
+    min-height: 80vh;
 }
 
 .footer-container {
@@ -28,9 +28,10 @@ body {
     container: flexbox;
 }
 
+
 img {
-    width: 12.5%;
-    height: 12.5%;
+    width: 25%;
+    height: 25%;
     padding: 12px;
 }
 
@@ -43,7 +44,7 @@ table {
 /* toasts walkthrough project CI  */
 .message-container {
     position: fixed;
-    top: 96px;
+    top: 116px;
     right: 20px;
     z-index: 99999999;
 }
