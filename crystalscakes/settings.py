@@ -11,7 +11,9 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 import os
 from pathlib import Path
-# import dj_database_url
+import dj_database_url
+if os.path.exists("env.py"):
+    import env
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,12 +22,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-%lb=_^1c+cx*r$i2gdw(w4yn16k*goy@bp$$04=28v)9c!@rak'
+SECRET_KEY = 'django-insecure-%lb=_^1c+cx*r$i2gdw(w4yn16k*goy@bp$$04=28v)9c!@rak'  # SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = True #'DEV' in os.environ
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = []# ['localhost'] if DEBUG else ['crystalscakes.herokuapp.com']
 
 
 # Application definition
@@ -40,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'allauth',
     'allauth.account',
+    'allauth.socialaccount',
     'home',
     'products',
     'cart',
@@ -125,7 +128,7 @@ LOGIN_REDIRECT_URL = '/'
 
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
-        # 'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+        'default': database_url.parse(os.environ.get('DATABASE_URL'))
     }
 else:
     DATABASES = {
