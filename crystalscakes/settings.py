@@ -119,11 +119,11 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = False
-# ACCOUNT_EMAIL_VERIFICATION = 'mandatory' Email verification for account set up, emails not sending so cannot verify
+# ACCOUNT_EMAIL_VERIFICATION = 'mandatory' # Email verification for account set up, emails not sending so cannot verify
 ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = False
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
-LOGIN_REDIRECT_URL = '/profile/'
+LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'crystalscakes.wsgi.application'
 
@@ -202,6 +202,9 @@ STRIPE_PUBLIC_KEY = os.getenv(
 STRIPE_SECRET_KEY = os.getenv(
     'STRIPE_SECRET_KEY', 'sk_test_51Po1wPP4VJdHXu7ZEsAtqIzkk6WDZSgAcrTYSsjBFiaFoiYFWHiaQfgQciUPCCW7TASo7ZATTgDRlS88uVY9xDex00Md7cL2oQ')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
+
+# Edit before deployment
+
 
 if 'DEVELOPMENT' in os.environ:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
