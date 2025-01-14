@@ -42,11 +42,13 @@ Become familiar with the django framework
 Enable user authentication
 Build a product portfolio for customers and user to browse
 Enable payment through stripe
+Alolow users to add favorite items to a list in their user profile
 
 ### Developer Goals
 Become familiar with Django as a framework
 Develop skills in full stack development
 Build a functioning final project
+Develop skills in web development and coding
 
 ## Software
 - IDE - VSCode
@@ -98,19 +100,28 @@ Bootstrap 5 Template [link]
 ### Alpha Testing
 ### Beta Testing
 ### Django Testing
+ - Email verification on signup has been validated through printing the content to the development copnsole, a screenshot of the console showing the verification email has been included below:
+ - ![Console Email Verification](msp4/Milestone-Project-4/Testting/Email-Verification.png)
+  
 
-## Buges & Fixes
+## Bugs & Fixes
 Fixtures data
 Add to cart
 Favorites functionality
+
+## Known Bugs in Deployment
+- Account Details form does not render on profile
+- Password Change results in a 500 status
+- The product minus adds items to the cart rather than remove them
+- Titles are occasionally hidden behind navbar
+- Footer does not remain at bottom of page on all renders
+- AllAuth templates have little styling due to heavy use of templating in newest version
 
 ## Deployment
 
 ## Credit
 - Code Institute Walkthrough Project Boutique Ado has been relied on heavily throughout the project development with numerous code snippets re-used and re-purposed.
-
 - Images taken from Whip & Drizzle Instagram
-
 - Footer from MDBoostrap.com - https://mdbootstrap.com/snippets/standard/mdbootstrap/2885008?view=side
 
 ## License
