@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True #'DEV' in os.environ
 
-ALLOWED_HOSTS = []# ['localhost'] if DEBUG else ['crystalscakes.herokuapp.com']
+ALLOWED_HOSTS = ['crystals-cakes-4efc6d8bc1c9.herokuapp.com' , 'localhost']
 
 
 # Application definition
