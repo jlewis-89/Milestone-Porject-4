@@ -105,9 +105,11 @@ Bootstrap 5 Template [link]
   
 
 ## Bugs & Fixes
-Fixtures data
-Add to cart
-Favorites functionality
+Numerous bugs where introduced during development as the tempalte followed was using older versions of django, crispy-forms, bootstrap, and jQuery. As I opted to use the most current version there have been numerous conflicts that have had to be addressed and resolutions found.
+Crisp-Form tags not functioning, removed crispy-forms tags in place of standard form formatting.
+Fixtures data not loading, used boutique ado template and populated with own data
+Add to cart - Issues adding items to cart and editing cart contents, product id not passed through correctly
+Favorites functionality - Could not get items to add to favorites list, required item id and not passed through in view
 
 ## Known Bugs in Deployment
 - Account Details form does not render on profile
@@ -116,6 +118,8 @@ Favorites functionality
 - Titles are occasionally hidden behind navbar
 - Footer does not remain at bottom of page on all renders
 - AllAuth templates have little styling due to heavy use of templating in newest version
+- No user feedback after purchase, items remain in basket and have to be manually removed
+- My Orders on profile is not updated with order
 
 ## Deployment
 
