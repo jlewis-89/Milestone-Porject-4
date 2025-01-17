@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True #'DEV' in os.environ
+DEBUG = 'DEV' in os.environ
 
 ALLOWED_HOSTS = ['crystals-cakes-4efc6d8bc1c9.herokuapp.com' , 'localhost']
 
@@ -224,9 +224,9 @@ FREE_DELIVERY_THRESHOLD = 10
 STANDARD_DELIVERY_PERCENTAGE = 10
 STRIPE_CURRENCY = 'gbp'
 STRIPE_PUBLIC_KEY = os.getenv(
-    'STRIPE_PUBLIC_KEY') # , 'pk_test_51Po1wPP4VJdHXu7ZMtG8r9uvhmQlM6GLEBoQqcn3NTf09DXZaiZEnVRXy3M1eyZKlj9sp5iDiwYysWTI9X4kvCOw00YeKoiRM8'
+    'STRIPE_PUBLIC_KEY')
 STRIPE_SECRET_KEY = os.getenv(
-    'STRIPE_SECRET_KEY') # , 'sk_test_51Po1wPP4VJdHXu7ZEsAtqIzkk6WDZSgAcrTYSsjBFiaFoiYFWHiaQfgQciUPCCW7TASo7ZATTgDRlS88uVY9xDex00Md7cL2oQ'
+    'STRIPE_SECRET_KEY')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 
 # Edit before deployment
