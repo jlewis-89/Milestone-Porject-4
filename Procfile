@@ -1,1 +1,1 @@
-web: gunicorn crystalscakes.wsgi.application
+web: gunicorn crystalscakes.wsgi:application
