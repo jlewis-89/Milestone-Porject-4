@@ -69,12 +69,53 @@ Bootstrap 5 Template [link]
 
 ## UX
 ### User Stories
+## User stories
 
-1. Visit the website at http://localhost:3000.
-2. Explore the product catalog, add items to your cart, and proceed to checkout.
-3. Access the admin dashboard at http://localhost:8000/admin (login required).
+| User Story ID                  | As a     | I want to                                                  | To                                                                                               |
+| ------------------------------ | ----------- | ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------- |
+| Viewing and Navigation         |
+| 1                              | Customer    | View the products available                                             | Quickly select items to purchase |
+| 2                              | Customer    | View the product details                                     | Find out further information on the products size and quantity (if applicable)|
+| 3                              | Customer    | Be able to add items to the basket                                         | Be able to review and purchase my products when I've finished shopping |
+| 4                              | Customer    | See the  price update automatically when I update my basket         | So i know how much the order will cost before paying |
+| Registration and User Accounts |
+| 5                              | Site User   | Register for an account                                           | To keep personal data so I do not have to re-enter it |
+| 6                              | Site User   | Easily login or logout                                                   | To Access my account |
+| 8                             | Site User   | Easily access my user profile                                            | Access my account quickly |
+| 9                             | Site User   | Have a personalised user profile                                         | With my personal order history and be able to update my default billing address |                                                  |
+| Sorting and Searching          |
+| 10                             | Customer    | Sort / Filter products by category and search       | Sort through and find the products I'm most intrested in quickly and eaily |
+| Purchasing and Checkout        |
+| 11                             | Customer    | Pay quickly and easily for my products              | To ensure a quick and easy transaction and reicieve my items |
+| 12                             | Store Owner | Showcase featured listings   | Give website visitors a quick sense of the types of listings available on my website |
+
 
 ### Data Schema
+
+![Entity Realtionship Data Schema](<Testing/Crystals Cakes ER DB.png>)
+
+#### Relationships
+
+- Order to UserProfile
+    - One-to-Many: A UserProfile can have multiple Orders, but an Order can belong to only one UserProfile.
+
+- OrderLineItem to Order
+    - Many-to-One: An Order can have multiple OrderLineItems, but each OrderLineItem belongs to one Order.
+
+- OrderLineItem to Product
+    - Many-to-One: A Product can appear in multiple OrderLineItems, but each OrderLineItem refers to one Product.
+
+- Product to Category
+    - Many-to-One: A Category can have multiple Products, but each Product belongs to one Category.
+
+- UserProfile to User
+    - One-to-One: Each User can have one UserProfile, and each UserProfile is linked to one User.
+
+- Favorite to User
+    - Many-to-One: A User can have multiple Favorites, but each Favorite belongs to one User.
+
+- Favorite to Product
+    - Many-to-One: A Product can be favorited by multiple Users, but each Favorite refers to one Product.
 
 ### Features
 
