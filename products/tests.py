@@ -33,7 +33,7 @@ class ProductViewsTestCase(TestCase):
         self.assertContains(response, 'Test Product')
 
     def test_add_product_view(self):
-        self.client.login(username='adminpython manage.py runserver', password='password')
+        self.client.login(username='admin', password='password')
         response = self.client.post(self.add_product_url, {
             'name': 'New Product',
             'price': 20.00,

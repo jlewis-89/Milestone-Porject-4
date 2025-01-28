@@ -145,6 +145,7 @@ Bootstrap 5 Template [link]
 ### Django Testing
  - Email verification on signup has been validated through printing the content to the development copnsole, a screenshot of the console showing the verification email has been included below:
  - ![Console Email Verification](msp4/Milestone-Project-4/Testting/Email-Verification.png)
+ - Django's test suite waqs used to test the functionality of the various views through the test.py file in each app. These tests are run through the  `manage.py test ` command
   
 
 ## Bugs & Fixes
@@ -187,42 +188,49 @@ dj-database-url
 psycopg2-binary
 Install them using:
 
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 Modify settings.py
 
 Update your settings.py to configure static files and database settings:
 
-import dj_database_url
-import os
+`import dj_database_url`
+`import os`
 
-AWS S3 Configuration
-AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
-AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
-AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
-AWS_S3_OBJECT_PARAMETERS = {
+`AWS S3 Configuration`
+
+`AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')`
+
+`AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')`
+
+`AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')`
+
+`AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'`
+
+`AWS_S3_OBJECT_PARAMETERS = {
     'CacheControl': 'max-age=86400',
-}
-DEFAULT_FILE_STORAGE = 'storages.backends.s3.S3Boto3Storage'
-STATICFILES_STORAGE = 'storages.backends.s3.S3Boto3Storage'
+}`
 
-Static files (CSS, JavaScript, Images)
-STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+`DEFAULT_FILE_STORAGE = 'storages.backends.s3.S3Boto3Storage'`
+
+`STATICFILES_STORAGE = 'storages.backends.s3.S3Boto3Storage'`
+
+`Static files (CSS, JavaScript, Images)`
+`STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/static/'`
+`STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')`
 
 Database Configuration
-DATABASES = {
-    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
-}
-Collect Static Files
 
+`DATABASES = {
+    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
+}`
+
+Collect Static Files
 Run the command to collect static files into the static root:
 
-python manage.py collectstatic
+`python manage.py collectstatic`
+
 Step 2: Set Up AWS S3
-
 Create an S3 Bucket
-
 Go to your AWS Management Console.
 Navigate to S3 and create a new bucket.
 Set the bucket name (it should be unique) and select the appropriate region.
@@ -230,7 +238,7 @@ Set Bucket Policy
 
 Update the bucket policy to allow public access to your static files. Replace your-bucket-name with your actual bucket name.
 
-{
+`{
     "Version": "2012-10-17",
     "Statement": [
         {
@@ -241,7 +249,7 @@ Update the bucket policy to allow public access to your static files. Replace yo
             "Resource": "arn:aws:s3:::your-bucket-name/*"
         }
     ]
-}
+}`
 Create an IAM User for S3
 
 Go to IAM in your AWS Management Console.
@@ -254,32 +262,31 @@ Create a Heroku App
 
 Create a new Heroku app in your terminal:
 
-heroku create your-app-name
+`heroku create your-app-name`
 Set Environment Variables
 
 Set the environment variables in Heroku using the following commands:
 
-heroku config:set AWS_ACCESS_KEY_ID='your-access-key-id'
+`heroku config:set AWS_ACCESS_KEY_ID='your-access-key-id'
 heroku config:set AWS_SECRET_ACCESS_KEY='your-secret-access-key'
 heroku config:set AWS_STORAGE_BUCKET_NAME='your-bucket-name'
-heroku config:set DATABASE_URL='your-database-url'
+heroku config:set DATABASE_URL='your-database-url'`
 Deploy Your Project
 
 Commit your changes and push the code to Heroku:
 
-git add .
-git commit -m "Deploying Django project to Heroku"
-git push heroku master
-Run Migrations
+`git add .`
+`git commit -m "Deploying Django project to Heroku"`
+`git push heroku master`
 
+Run Migrations
 After deployment, run the following command to apply migrations:
 
-heroku run python manage.py migrate
-Open Your Application
+`heroku run python manage.py migrate`
 
-You can now open your app in the browser:
+Open Your Application and you can now open your app in the browser:
 
-heroku open
+`heroku open`
 
 ## Credit
 - Code Institute Walkthrough Project Boutique Ado has been relied on heavily throughout the project development with numerous code snippets re-used and re-purposed.
