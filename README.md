@@ -1,6 +1,7 @@
 # CrystalsCakes
+![CC-Mockup](<Testing/MSP4 Mockup.png>)
 
-Crystal's Cakes is a full-stack e-commerce website built using the Django full stack as part of the Milestone 4 Project for Code Institutes Full Stack Developer Course
+Crystal's Cakes is a full-stack e-commerce project built using the Django full stack framework as part of the Milestone 4 Project for Code Institutes Full Stack Developer Course
 
 ## Live Project
 [View the Live Project here](https://crystals-cakes-4efc6d8bc1c9.herokuapp.com/)
@@ -23,9 +24,7 @@ Crystal's Cakes is a full-stack e-commerce website built using the Django full s
 11. License
 
 ## About
-Crystal's Cakes is an online e-commerce store where you can buy baked goods and products listed in the online store, it is enabled to allow users to register browse, save items, add items to a basket and checkout, with the appropriate email confirmations
-
-## Purpose
+### Purpose
 Crystal's Cakes is an online e-commerce store where you can buy baked goods and products listed in the online store, it is enabled to allow users to register browse, save items, add items to a basket and checkout, with appropriate alerts and email confirmations.
 
 This project has been designed to suit the criteria laid out in the Milestone 4 Project of Code Institute and City of Bristols Marking Criteria in order to pass the final qualification.
@@ -69,32 +68,31 @@ Bootstrap 5 Template [link]
 
 ## UX
 ### User Stories
-## User stories
 
 | User Story ID                  | As a     | I want to                                                  | To                                                                                               |
 | ------------------------------ | ----------- | ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------- |
 | Viewing and Navigation         |
-| 1                              | Customer    | View the products available                                             | Quickly select items to purchase |
-| 2                              | Customer    | View the product details                                     | Find out further information on the products size and quantity (if applicable)|
-| 3                              | Customer    | Be able to add items to the basket                                         | Be able to review and purchase my products when I've finished shopping |
+| 1                              | Customer    | View the products available               | Quickly select items to purchase |
+| 2                              | Customer    | View the product details              | Find out further information on the products size and quantity (if applicable)|
+| 3                              | Customer    | Be able to add items to the basket                | Be able to review and purchase my products when I've finished shopping |
 | 4                              | Customer    | See the  price update automatically when I update my basket         | So i know how much the order will cost before paying |
 | Registration and User Accounts |
-| 5                              | Site User   | Register for an account                                           | To keep personal data so I do not have to re-enter it |
-| 6                              | Site User   | Easily login or logout                                                   | To Access my account |
-| 8                             | Site User   | Easily access my user profile                                            | Access my account quickly |
-| 9                             | Site User   | Have a personalised user profile                                         | With my personal order history and be able to update my default billing address |                                                  |
+| 5                              | Site User   | Register for an account                | To keep personal data so I do not have to re-enter it |
+| 6                              | Site User   | Easily login or logout                          | To Access my account |
+| 8                             | Site User   | Easily access my user profile               | Access my account quickly |
+| 9                             | Site User   | Have a personalised user profile          | With my personal order history and be able to update my default billing address |                                                  |
 | Sorting and Searching          |
-| 10                             | Customer    | Sort / Filter products by category and search       | Sort through and find the products I'm most intrested in quickly and eaily |
+| 10                             | Customer    | Sort / Filter products by category and search  | Sort through and find the products I'm most intrested in quickly and eaily |
 | Purchasing and Checkout        |
-| 11                             | Customer    | Pay quickly and easily for my products              | To ensure a quick and easy transaction and reicieve my items |
-| 12                             | Store Owner | Showcase featured listings   | Give website visitors a quick sense of the types of listings available on my website |
+| 11                             | Customer    | Pay quickly and easily for my products    | To ensure a quick and easy transaction and reicieve my items |
+| 12                             | Store Owner | Showcase products   | Give site owner opportunity to sell products to wider market online|
 
 
-### Data Schema
+## Data Schema
 
 ![Entity Realtionship Data Schema](<Testing/Crystals Cakes ER DB.png>)
 
-#### Relationships
+### Relationships
 
 - Order to UserProfile
     - One-to-Many: A UserProfile can have multiple Orders, but an Order can belong to only one UserProfile.
@@ -118,7 +116,6 @@ Bootstrap 5 Template [link]
     - Many-to-One: A Product can be favorited by multiple Users, but each Favorite refers to one Product.
 
 ### Features
-
 - User authentication (signup, login, logout)
 - Product catalog with search and filtering options
 - Shopping cart functionality
@@ -134,7 +131,6 @@ Bootstrap 5 Template [link]
 - Checkout
 - Media (Static Folders)
 
-
 ## Testing
 ### User Stories
 ### HTML
@@ -146,6 +142,7 @@ Bootstrap 5 Template [link]
  - Email verification on signup has been validated through printing the content to the development copnsole, a screenshot of the console showing the verification email has been included below:
  - ![Console Email Verification](msp4/Milestone-Project-4/Testting/Email-Verification.png)
  - Django's test suite waqs used to test the functionality of the various views through the test.py file in each app. These tests are run through the  `manage.py test ` command
+![Django Test Script](Testing/tests-output.png)
   
 
 ## Bugs & Fixes
