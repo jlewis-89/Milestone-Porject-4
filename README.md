@@ -1,72 +1,96 @@
 # CrystalsCakes
 ![CC-Mockup](<Testing/MSP4 Mockup.png>)
 
-Crystal's Cakes is a full-stack e-commerce project built using the Django full stack framework as part of the Milestone 4 Project for Code Institutes Full Stack Developer Course
+- *Crystal's Cakes is a full-stack e-commerce project built using the Django full stack framework as part of the Milestone 4 Project for Code Institutes Full Stack Developer Course*
 
 ## Live Project
-[View the Live Project here](https://crystals-cakes-4efc6d8bc1c9.herokuapp.com/)
+**[View the Live Project here](https://crystals-cakes-4efc6d8bc1c9.herokuapp.com/)**
 
 ## Repository
-[View the repo here.](https://github.com/jlewis-89/Milestone-Porject-4)
+**[View the repo here.](https://github.com/jlewis-89/Milestone-Porject-4)**
 
 ## Table of Contents
-
-1. About
-2. Purpose
-3. Software
-4. Design
-5. Features
-6. UI
-7. UX
-8. Testing
-9. Deployment
-10. Credit
-11. License
-
+1. [About](#about)
+2. [Purpose](#purpose)
+3. [Software](#software)
+4. [Design](#design)
+5. [Features](#features)
+6. [UI](#ui)
+7. [UX](#ux)
+8. [Testing](#testing)
+9. [Deployment](#deployment)
+10. [ Credit](#credit)
+11. [ License](#license)
+---
 ## About
-### Purpose
-Crystal's Cakes is an online e-commerce store where you can buy baked goods and products listed in the online store, it is enabled to allow users to register browse, save items, add items to a basket and checkout, with appropriate alerts and email confirmations.
 
-This project has been designed to suit the criteria laid out in the Milestone 4 Project of Code Institute and City of Bristols Marking Criteria in order to pass the final qualification.
+### Purpose
+- *Crystal's Cakes is an online e-commerce store where you can buy baked goods and products listed in the online store, it is enabled to allow users to register browse, save items, add items to a basket and checkout, with appropriate alerts and email confirmations.*
+
+- *This project has been designed to suit the criteria laid out in the Milestone 4 Project of Code Institute and City of Bristols Marking Criteria in order to pass the final qualification.*
 
 ### Project Goals
-To build a functioning e-commerce website
-Become familiar with the django framework
-Enable user authentication
-Build a product portfolio for customers and user to browse
-Enable payment through stripe
-Alolow users to add favorite items to a list in their user profile
+> To build a functioning e-commerce website
+
+> Become familiar with the django framework
+ 
+> Enable user authentication
+ 
+> Build a product portfolio for customers and user to browse
+
+> Enable payment through stripe
+
+> Allow users to add favorite items to a list in their user profile
 
 ### Developer Goals
-Become familiar with Django as a framework
-Develop skills in full stack development
-Build a functioning final project
-Develop skills in web development and coding
+> Become familiar with Django as a framework
+ 
+> Develop skills in full stack development
 
+> Build a functioning final project
+
+> Develop skills in web development and coding
+---
 ## Software
-- IDE - VSCode
-- Wireframing & Prototyping - Figma / Draw.io
-- Data Schema - Draw.io
-- Image Conversion - XnConvert
-- - **Frontend**:
-  - HTML
-  - CSS (Styling)
-  - Javascript
+- IDE 
+  - VSCode
+### Technologies
+- HTML5
+- CSS3
+- JavaScript
+- Python
 
-- **Backend**:
-  - Django (Python web framework)
-  - SQLite3 (Database)
+### Frameworks
+- Django
+- Bootstrap
+- Jinja
+- jQuery
+- Font Awesome
 
+### Others
+- GitHub
+- Heroku
+- Amazon Web Services (AWS)
+- Stripe
+---
 ## Design
 
+- Typography
+  - [Roboto Typography Set](https://fonts.google.com/specimen/Roboto)
+- Imagery
+  - Curteosy of [Whip & Drizzle Instagram](https://www.instagram.com/whipanddrizzlebakery/)
+- Icons
+  - [Font Awesome](https://fontawesome.com/)
+
 ## UI
-### Typography
+
 ### Navigation
-Bootstrap 5 Template [link]
-### Colour Scheme
+- Bootstrap 5 Template [MDBootstrap](https://mdbootstrap.com/snippets/standard/mdbootstrap/)
+
 ### Wireframes
 
 ## UX
+
 ### User Stories
 
 | User Story ID                  | As a     | I want to                                                  | To                                                                                               |
@@ -115,7 +139,7 @@ Bootstrap 5 Template [link]
 - Favorite to Product
     - Many-to-One: A Product can be favorited by multiple Users, but each Favorite refers to one Product.
 
-### Features
+## Features
 - User authentication (signup, login, logout)
 - Product catalog with search and filtering options
 - Shopping cart functionality
@@ -123,7 +147,7 @@ Bootstrap 5 Template [link]
 - Admin dashboard for managing products, orders, and users
 - Responsive design for mobile and desktop
   
-#### Django Apps
+## Django Apps
 - Home
 - Products
 - Cart
@@ -133,16 +157,35 @@ Bootstrap 5 Template [link]
 
 ## Testing
 ### User Stories
+
 ### HTML
+W3C Markup Validation Service
+
 ### CSS
+W3C CSS Validation Service
+
 ### Javascript
+JSHint
+
+### Performance
+Lighthouse
+
+### Accessibility
+WebAIM Contrast Checker
+WAVE Web Accessibility Evaluation Tools
+
 ### Alpha Testing
+
 ### Beta Testing
+
 ### Django Testing
  - Email verification on signup has been validated through printing the content to the development copnsole, a screenshot of the console showing the verification email has been included below:
- - ![Console Email Verification](msp4/Milestone-Project-4/Testting/Email-Verification.png)
+  
+  ![Console Email Verification](msp4/Milestone-Project-4/Testting/Email-Verification.png)
+  
  - Django's test suite waqs used to test the functionality of the various views through the test.py file in each app. These tests are run through the  `manage.py test ` command
-![Django Test Script](Testing/tests-output.png)
+  
+  ![Django Test Script](Testing/tests-output.png)
   
 
 ## Bugs & Fixes
