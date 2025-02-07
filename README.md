@@ -159,24 +159,26 @@
 ### User Stories
 
 ### HTML
-W3C Markup Validation Service
+[W3C Markup Validation Service](https://validator.w3.org/)
 
 ### CSS
-W3C CSS Validation Service
+[W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
 
 ### Javascript
-JSHint
+[JSHint](https://jshint.com/)
 
 ### Performance
-Lighthouse
+Lighthouse![Lighthouse Test Results](<Testing/MSP4 Lighthouse Testing.png>)
 
 ### Accessibility
 WebAIM Contrast Checker
-WAVE Web Accessibility Evaluation Tools
+WAVE Web Accessibility Evaluation Tools![WAVE Accessibility Testing](<Testing/WAVE Test MSP4.png>)
 
 ### Alpha Testing
+Intial feedback from during alpha testing resulted in a number of buges and fixes listed [here](#bugs--fixes)
 
 ### Beta Testing
+Feedback from beta testing picked up on missing images, and hidden headers from miss aligned containers resulting in titles and information being hidden behind the navbar.
 
 ### Django Testing
  - Email verification on signup has been validated through printing the content to the development copnsole, a screenshot of the console showing the verification email has been included below:
@@ -189,7 +191,7 @@ WAVE Web Accessibility Evaluation Tools
   
 
 ## Bugs & Fixes
-Numerous bugs where introduced during development as the tempalte followed was using older versions of django, crispy-forms, bootstrap, and jQuery. As I opted to use the most current version there have been numerous conflicts that have had to be addressed and resolutions found.
+*Numerous bugs where introduced during development as the tempalte followed was using older versions of django, crispy-forms, bootstrap, and jQuery. As I opted to use the most current version there have been numerous conflicts that have had to be addressed and resolutions found.*
 * Crisp-Form tags not functioning, removed crispy-forms tags in place of standard form formatting.
 * Fixtures data not loading, used boutique ado template and populated with own data
 * Add to cart - Issues adding items to cart and editing cart contents, product id not passed through correctly
@@ -208,126 +210,126 @@ Numerous bugs where introduced during development as the tempalte followed was u
 - My Orders on profile is not updated with order
 
 ## Deployment
-Prerequisites
-
-A Django project
-A Heroku account
-An AWS account with S3 access
-git and heroku CLI installed
-Step 1: Prepare Your Django Project
-
-Install Required Packages
-
-Ensure you have the following packages in your requirements.txt:
-
-django
-gunicorn
-django-storages
-boto3
-dj-database-url
-psycopg2-binary
-Install them using:
-
-`pip install -r requirements.txt`
-Modify settings.py
-
-Update your settings.py to configure static files and database settings:
-
-`import dj_database_url`
-`import os`
-
-`AWS S3 Configuration`
-
-`AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')`
-
-`AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')`
-
-`AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')`
-
-`AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'`
-
-`AWS_S3_OBJECT_PARAMETERS = {
-    'CacheControl': 'max-age=86400',
-}`
-
-`DEFAULT_FILE_STORAGE = 'storages.backends.s3.S3Boto3Storage'`
-
-`STATICFILES_STORAGE = 'storages.backends.s3.S3Boto3Storage'`
-
-`Static files (CSS, JavaScript, Images)`
-`STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/static/'`
-`STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')`
-
-Database Configuration
-
-`DATABASES = {
-    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
-}`
-
-Collect Static Files
-Run the command to collect static files into the static root:
-
-`python manage.py collectstatic`
-
-Step 2: Set Up AWS S3
-Create an S3 Bucket
-Go to your AWS Management Console.
-Navigate to S3 and create a new bucket.
-Set the bucket name (it should be unique) and select the appropriate region.
-Set Bucket Policy
-
-Update the bucket policy to allow public access to your static files. Replace your-bucket-name with your actual bucket name.
-
-`{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "PublicReadGetObject",
-            "Effect": "Allow",
-            "Principal": "*",
-            "Action": "s3:GetObject",
-            "Resource": "arn:aws:s3:::your-bucket-name/*"
-        }
-    ]
-}`
-Create an IAM User for S3
-
-Go to IAM in your AWS Management Console.
-Create a new user with programmatic access.
-Attach the existing policy AmazonS3FullAccess or create a custom policy with limited permissions to your bucket.
-Save the Access Key ID and Secret Access Key.
-Step 3: Set Up Heroku
-
-Create a Heroku App
-
-Create a new Heroku app in your terminal:
-
-`heroku create your-app-name`
-Set Environment Variables
-
-Set the environment variables in Heroku using the following commands:
-
-`heroku config:set AWS_ACCESS_KEY_ID='your-access-key-id'
-heroku config:set AWS_SECRET_ACCESS_KEY='your-secret-access-key'
-heroku config:set AWS_STORAGE_BUCKET_NAME='your-bucket-name'
-heroku config:set DATABASE_URL='your-database-url'`
-Deploy Your Project
-
-Commit your changes and push the code to Heroku:
-
-`git add .`
-`git commit -m "Deploying Django project to Heroku"`
-`git push heroku master`
-
-Run Migrations
-After deployment, run the following command to apply migrations:
-
-`heroku run python manage.py migrate`
-
-Open Your Application and you can now open your app in the browser:
-
-`heroku open`
-
+> Prerequisites
+> 
+> A Django project
+> A Heroku account
+> An AWS account with S3 access
+> git and heroku CLI installed
+> Step 1: Prepare Your Django Project
+> 
+> Install Required Packages
+> 
+> Ensure you have the following packages in your requirements.txt:
+> 
+> django
+> gunicorn
+> django-storages
+> boto3
+> dj-database-url
+> psycopg2-binary
+> Install them using:
+> 
+> `pip install -r requirements.txt`
+> Modify settings.py
+> 
+> Update your settings.py to configure static files and database settings:
+> 
+> `import dj_database_url`
+> `import os`
+> 
+> `AWS S3 Configuration`
+> 
+> `AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')`
+> 
+> `AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')`
+> 
+> `AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')`
+> 
+> `AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'`
+> 
+> `AWS_S3_OBJECT_PARAMETERS = {
+>     'CacheControl': 'max-age=86400',
+> }`
+> 
+> `DEFAULT_FILE_STORAGE = 'storages.backends.s3.S3Boto3Storage'`
+> 
+> `STATICFILES_STORAGE = 'storages.backends.s3.S3Boto3Storage'`
+> 
+> `Static files (CSS, JavaScript, Images)`
+> `STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/static/'`
+> `STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')`
+> 
+> Database Configuration
+> 
+> `DATABASES = {
+>     'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
+> }`
+> 
+> Collect Static Files
+> Run the command to collect static files into the static root:
+> 
+> `python manage.py collectstatic`
+> 
+> Step 2: Set Up AWS S3
+> Create an S3 Bucket
+> Go to your AWS Management Console.
+> Navigate to S3 and create a new bucket.
+> Set the bucket name (it should be unique) and select the appropriate region.
+> Set Bucket Policy
+> 
+> Update the bucket policy to allow public access to your static files. Replace your-bucket-name with your actual bucket name.
+> 
+> `{
+>     "Version": "2012-10-17",
+>     "Statement": [
+>         {
+>             "Sid": "PublicReadGetObject",
+>             "Effect": "Allow",
+>             "Principal": "*",
+>             "Action": "s3:GetObject",
+>             "Resource": "arn:aws:s3:::your-bucket-name/*"
+>         }
+>     ]
+> }`
+> Create an IAM User for S3
+> 
+> Go to IAM in your AWS Management Console.
+> Create a new user with programmatic access.
+> Attach the existing policy AmazonS3FullAccess or create a custom policy with limited permissions to your bucket.
+> Save the Access Key ID and Secret Access Key.
+> Step 3: Set Up Heroku
+> 
+> Create a Heroku App
+> 
+> Create a new Heroku app in your terminal:
+> 
+> `heroku create your-app-name`
+> Set Environment Variables
+> 
+> Set the environment variables in Heroku using the following commands:
+> 
+> `heroku config:set AWS_ACCESS_KEY_ID='your-access-key-id'
+> heroku config:set AWS_SECRET_ACCESS_KEY='your-secret-access-key'
+> heroku config:set AWS_STORAGE_BUCKET_NAME='your-bucket-name'
+> heroku config:set DATABASE_URL='your-database-url'`
+> Deploy Your Project
+> 
+> Commit your changes and push the code to Heroku:
+> 
+> `git add .`
+> `git commit -m "Deploying Django project to Heroku"`
+> `git push heroku master`
+> 
+> Run Migrations
+> After deployment, run the following command to apply migrations:
+> 
+> `heroku run python manage.py migrate`
+> 
+> Open Your Application and you can now open your app in the browser:
+> 
+> `heroku open`
+> 
 ## Credit
 - Code Institute Walkthrough Project Boutique Ado has been relied on heavily throughout the project development with numerous code snippets re-used and re-purposed.
 - Images taken from Whip & Drizzle Instagram
