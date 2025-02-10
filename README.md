@@ -90,7 +90,6 @@
 ### Wireframes
 
 ## UX
-
 ### User Stories
 
 | User Story ID                  | As a     | I want to                                                  | To                                                                                               |
@@ -157,15 +156,32 @@
 
 ## Testing
 ### User Stories
+| User Story ID | Test | Performance |
+| ------------- | ---- | ----------- |
+| 1 | Tested by viewing and selecting availabale products | Passed |
+| 2 | Tested by viewing details about the product after clicking on the item | Passed |
+| 3 | Tested by adding items to the basket | Passed |
+| 4 | Tested by adding additional items to the basket to verify the price change | Passed |
+| 5 | Tested by setting up a user account | Passed |
+| 6 | Tested by logging in and out of the test user account | Passed |
+| 7 | Tested by verify the user profile page exists | Passed |
+| 8 | Tested by verifying profile links work | Passed |
+| 9 | Tested by adding favorite items to profile page | Passed |
+| 10 | Tested by selecting categories and using search bar to return results | Passed |
+| 11 | Tested by Completeing a checkout run with temp details | Passed |
+| 12 | Tested by Enabling admin update of products and product management| Passed |
 
 ### HTML
 [W3C Markup Validation Service](https://validator.w3.org/)
+![HTML Test Results](<Testing/HTML Validator MSP4.png>)
 
 ### CSS
 [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
+![CSS Test Results](<Testing/CSS ValidatorMSP4.png>)
 
 ### Javascript
 [JSHint](https://jshint.com/)
+![JS-Hint Test Results](<Testing/JSHint MSP4.png>)
 
 ### Performance
 Lighthouse![Lighthouse Test Results](<Testing/MSP4 Lighthouse Testing.png>)
