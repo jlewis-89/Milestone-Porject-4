@@ -21,7 +21,7 @@
 9. [Deployment](#deployment)
 10. [ Credit](#credit)
 11. [ License](#license)
----
+
 ## About
 
 ### Purpose
@@ -50,7 +50,7 @@
 > Build a functioning final project
 
 > Develop skills in web development and coding
----
+
 ## Software
 - IDE 
   - VSCode
@@ -72,22 +72,27 @@
 - Heroku
 - Amazon Web Services (AWS)
 - Stripe
----
-## Design
 
+## Design
 - Typography
   - [Roboto Typography Set](https://fonts.google.com/specimen/Roboto)
 - Imagery
   - Curteosy of [Whip & Drizzle Instagram](https://www.instagram.com/whipanddrizzlebakery/)
 - Icons
   - [Font Awesome](https://fontawesome.com/)
+- Wireframing
+  - Figma
+- Database Schema
+  - DBDiagram.io
 
 ## UI
-
 ### Navigation
 - Bootstrap 5 Template [MDBootstrap](https://mdbootstrap.com/snippets/standard/mdbootstrap/)
 
 ### Wireframes
+![Process Map](Testing/CC_process_map.png)
+![Wireframe Homepage](Testing/CrystalsCakes_Wireframe_1.png)
+![Wireframe Login](Testing/CrystalsCakes_wireframe2.png)
 
 ## UX
 ### User Stories
