@@ -138,9 +138,11 @@
     {% endif %}
     {% block page_header %}
     {% endblock %}
-    {% block content %}
-    {% endblock %}
-
+    <div class="container center-container mx-auto">
+        <br>
+        {% block content %}
+        {% endblock %}
+    </div>
 
     <br>
     {% block postloadjs %}
